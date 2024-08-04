@@ -5,7 +5,7 @@
   My portfolio website built with <a href="https://nextjs.org" target="_blank">Next.js</a>, <a href="https://tailwindcss.com" target="_blank">Tailwind CSS</a>, <a href="https://www.radix-ui.com" target="_blank">Radix UI</a> and deployed on <a href="https://www.vercel.com/" target="_blank">Vercel</a>.⚡
 </p>
 
-![preview](https://res.cloudinary.com/dvsoifdtz/image/upload/v1721942281/Screenshot_2024-07-25_at_5.15.24_PM_gd5cor.png)
+![preview](https://res.cloudinary.com/dvsoifdtz/image/upload/v1722783301/suryansh-emoji-bg.png)
 
 ## Tech Stack
 
