@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 const title = 'Suryansh Chauhan | Developer';
 const description =
-  'Software Developer';
+  'Recent DePauw University Graduate | Software & Web Developer | Data Analytics | Consulting';
 const url = 'https://suryansh.wiki';
 
 export const metadata: Metadata = {
