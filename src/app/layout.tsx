@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 const title = 'Suryansh Chauhan | Developer';
 const description =
-  'A self-proclaimed designer who specializes in full stack development (React.js & Node.js), from North Carolina.';
+  'Software Developer';
 const url = 'https://suryansh.wiki';
 
 export const metadata: Metadata = {
