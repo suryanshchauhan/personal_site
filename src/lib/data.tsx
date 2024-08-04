@@ -266,13 +266,14 @@ export const PROJECTS: ProjectDetails[] = [
     url: 'https://github.com/suryanshchauhan/today-i-learned/',
   },
   {
-    name: 'iBudgets',
+    name: 'iBudget',
     description:
-      'A user-friendly web app for personal budget management. Allocate amounts to categories, log expenses, and gain a clear financial overview. Accessible on desktop and mobile, no sign-up required, with local data storage.',
-    url: 'https://github.com/suryanshchauhan/iBudgets/',
+      'A full-stack budget management application with user authentication, account creation, budget tracking, and secure data management using Supabase.',
+    url: 'https://github.com/AndreiBalan-dev/iBudgets/',
     technologies: [
       'REACT.JS',
-      'JAVASCRIPT', 
+      'JAVASCRIPT',
+      'SUPABASE' 
     ],
   },
   {
