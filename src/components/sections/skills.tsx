@@ -7,6 +7,13 @@ import Typography from '@/components/general/typography';
 import Container from '@/components/layout/container';
 
 const SkillsSection = () => {
+  // Create enough duplicates to ensure smooth infinite scroll
+  const duplicatedTechnologies = [
+    ...TECHNOLOGIES,
+    ...TECHNOLOGIES,
+    ...TECHNOLOGIES
+  ];
+
   return (
     <Container id='skills'>
       <div className="flex flex-col items-center gap-4">
@@ -20,20 +27,13 @@ const SkillsSection = () => {
 
       <div className="relative overflow-hidden py-8">
         {/* Gradient masks for smooth entry/exit */}
-        <div className="absolute left-0 top-0 z-10 h-full w-16 bg-gradient-to-r from-gray to-transparent pointer-events-none"></div>
-        <div className="absolute right-0 top-0 z-10 h-full w-16 bg-gradient-to-l from-gray to-transparent pointer-events-none"></div>
+        <div className="absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-gray to-transparent pointer-events-none"></div>
+        <div className="absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-gray to-transparent pointer-events-none"></div>
         
         {/* Scrolling container */}
-        <div className="flex gap-8 md:gap-12 animate-scroll-simple">
-          {/* First set of technologies */}
-          {TECHNOLOGIES.map((technology, index) => (
-            <div key={`set1-${index}`} className="flex-shrink-0 w-32 md:w-36 flex justify-center">
-              <TechDetails {...technology} />
-            </div>
-          ))}
-          {/* Duplicate set for seamless loop */}
-          {TECHNOLOGIES.map((technology, index) => (
-            <div key={`set2-${index}`} className="flex-shrink-0 w-32 md:w-36 flex justify-center">
+        <div className="flex gap-12 md:gap-16 animate-infinite-scroll">
+          {duplicatedTechnologies.map((technology, index) => (
+            <div key={index} className="flex-shrink-0 w-20 md:w-24 flex justify-center">
               <TechDetails {...technology} />
             </div>
           ))}
