@@ -1,3 +1,7 @@
+'use client';
+
+import { useState } from 'react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 import Typography from '@/components/general/typography';
 import ImageWrapper from '@/components/data-display/image-wrapper';
 import Card from '@/components/layout/card';
@@ -18,53 +22,93 @@ const ExperienceDetails = ({
   endDate,
   summary,
 }: ExperienceDetailsProps) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleExpanded = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   return (
-    <Card className="mx-auto flex w-full max-w-5xl flex-col justify-between gap-6 p-6 md:flex-row md:gap-8 md:p-8 hover:shadow-lg transition-shadow duration-300">
-      <div className="max-md:order-1 md:w-1/4">
-        <ImageWrapper
-          src={logo}
-          srcForDarkMode={darkModeLogo}
-          alt={logoAlt}
-          className="max-w-[100px] md:max-w-[120px]"
-        />
-      </div>
-      <div className="flex flex-col gap-3 max-md:order-3 md:w-2/4">
-        <Typography variant="subtitle" className="font-semibold text-gray-900">
-          {position}
-        </Typography>
-        <ul className="flex list-disc flex-col gap-1.5 pl-4">
-          {summary?.map((sentence, index) => (
-            <Typography component="li" key={index} variant="body2" className="text-gray-600">
-              {sentence}
-            </Typography>
-          ))}
-        </ul>
-      </div>
-      <div className="max-md:order-2 md:w-1/4 flex flex-col gap-1">
-        <Typography className="text-gray-700 md:text-right font-medium">
-          {new Intl.DateTimeFormat('en-US', dateFormatOptions).format(
-            startDate
-          )}{' '}
-          -{' '}
-          {currentlyWorkHere
-            ? 'Present'
-            : endDate
-            ? new Intl.DateTimeFormat('en-US', dateFormatOptions).format(
-                endDate
-              )
-            : 'NA'}
-        </Typography>
-        {currentlyWorkHere && (
-          <div className="flex items-center gap-1 md:justify-end">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
-            </span>
-            <Typography variant="body3" className="text-green-600 font-medium">
-              Current
-            </Typography>
+    <Card className="mx-auto w-full max-w-5xl overflow-hidden transition-all duration-300 hover:shadow-lg">
+      {/* Header - Always visible */}
+      <div 
+        className="flex cursor-pointer items-center justify-between p-6 md:p-8"
+        onClick={toggleExpanded}
+      >
+        <div className="flex items-center gap-6 md:gap-8">
+          <div className="flex-shrink-0">
+            <ImageWrapper
+              src={logo}
+              srcForDarkMode={darkModeLogo}
+              alt={logoAlt}
+              className="max-w-[80px] md:max-w-[100px]"
+            />
           </div>
-        )}
+          <div className="flex flex-col gap-2">
+            <Typography variant="subtitle" className="font-semibold text-gray-900">
+              {position}
+            </Typography>
+            <div className="flex flex-col gap-1">
+              <Typography className="text-gray-700 font-medium">
+                {new Intl.DateTimeFormat('en-US', dateFormatOptions).format(
+                  startDate
+                )}{' '}
+                -{' '}
+                {currentlyWorkHere
+                  ? 'Present'
+                  : endDate
+                  ? new Intl.DateTimeFormat('en-US', dateFormatOptions).format(
+                      endDate
+                    )
+                  : 'NA'}
+              </Typography>
+              {currentlyWorkHere && (
+                <div className="flex items-center gap-1">
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
+                  </span>
+                  <Typography variant="body3" className="text-green-600 font-medium">
+                    Current
+                  </Typography>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+        
+        {/* Expand/Collapse Icon */}
+        <div className="flex-shrink-0 transition-transform duration-200">
+          {isExpanded ? (
+            <ChevronUp className="h-5 w-5 text-gray-500" />
+          ) : (
+            <ChevronDown className="h-5 w-5 text-gray-500" />
+          )}
+        </div>
+      </div>
+
+      {/* Expandable Content */}
+      <div 
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+          isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <div className="border-t border-gray-100 px-6 pb-6 md:px-8 md:pb-8">
+          <div className="pt-4">
+            <ul className="flex list-disc flex-col gap-2 pl-4">
+              {summary?.map((sentence, index) => (
+                <Typography 
+                  component="li" 
+                  key={index} 
+                  variant="body2" 
+                  className="text-gray-600 leading-relaxed"
+                >
+                  {sentence}
+                </Typography>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
     </Card>
   );
