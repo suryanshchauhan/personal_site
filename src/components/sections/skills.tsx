@@ -18,20 +18,15 @@ const SkillsSection = () => {
 
       <div className="relative overflow-hidden py-8">
         {/* Gradient masks */}
-        <div className="absolute left-0 top-0 z-10 h-full w-32 bg-gradient-to-r from-gray to-transparent pointer-events-none"></div>
-        <div className="absolute right-0 top-0 z-10 h-full w-32 bg-gradient-to-l from-gray to-transparent pointer-events-none"></div>
-        
-        {/* Center spotlight - highlights the middle item */}
-        <div className="absolute left-1/2 top-0 z-20 h-full w-40 -translate-x-1/2 pointer-events-none">
-          <div className="h-full w-full bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-        </div>
+        <div className="absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-gray to-transparent pointer-events-none"></div>
+        <div className="absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-gray to-transparent pointer-events-none"></div>
         
         {/* Continuous scrolling strip */}
-        <div className="flex gap-8 md:gap-12 animate-scroll-seamless carousel-container spotlight-container" style={{ width: 'max-content' }}>
+        <div className="flex gap-8 md:gap-12 animate-scroll-seamless" style={{ width: 'max-content' }}>
           {/* Repeat technologies multiple times for continuous effect */}
           {Array.from({ length: 6 }).map((_, setIndex) => 
             TECHNOLOGIES.map((technology, techIndex) => (
-              <div key={`${setIndex}-${techIndex}`} className="flex-shrink-0 w-24 md:w-28 flex justify-center carousel-item spotlight-item">
+              <div key={`${setIndex}-${techIndex}`} className="flex-shrink-0 w-24 md:w-28 flex justify-center">
                 <TechDetails {...technology} />
               </div>
             ))

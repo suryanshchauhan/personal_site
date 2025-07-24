@@ -32,9 +32,3 @@
   --app-gray-900: 249 250 251;
   --app-gray-950: 255 255 255;
 }
-
-/* Carousel spotlight effect */
-.carousel-container .carousel-item .tech-icon {
-  filter: grayscale(100%) opacity(0.4);
-  transition: filter 0.5s ease;
-}
