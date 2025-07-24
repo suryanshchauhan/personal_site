@@ -16,7 +16,7 @@ const SkillsSection = () => {
         </Typography>
       </div>
 
-      <div className="relative overflow-hidden py-8">
+      <div className="relative overflow-hidden py-8 pb-16">
         {/* Gradient masks */}
         <div className="absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-gray to-transparent pointer-events-none"></div>
         <div className="absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-gray to-transparent pointer-events-none"></div>
