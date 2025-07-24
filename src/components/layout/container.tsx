@@ -21,4 +21,8 @@ const Container = React.forwardRef<HTMLElement, ContainerProps>(
       </section>
     );
   }
-)
+);
+
+Container.displayName = 'Container';
+
+export default Container;
