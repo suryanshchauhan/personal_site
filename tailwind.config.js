@@ -61,7 +61,7 @@ module.exports = {
         'drawer-close': 'close 0.3s ease-in-out',
         'waving-hand': 'waving 2s linear 3',
         'scroll': 'scroll 15s linear infinite',
-        'scroll-full': 'scroll-full 15s linear infinite',
+        'scroll-full': 'scroll-full 20s linear infinite',
       },
     },
   },
