@@ -18,23 +18,24 @@ const SkillsSection = () => {
         </Typography>
       </div>
 
-      <div className="relative overflow-hidden">
-        {/* Spotlight area in the middle */}
-        <div className="absolute left-1/2 top-0 bottom-0 w-32 -translate-x-1/2 z-10 pointer-events-none">
-          <div className="w-full h-full bg-gradient-to-r from-transparent via-blue-100/30 to-transparent dark:via-blue-900/20"></div>
+      <div className="relative overflow-hidden py-8">
+        {/* Fixed spotlight area in the center */}
+        <div className="absolute left-1/2 top-0 bottom-0 w-40 -translate-x-1/2 z-10 pointer-events-none">
+          <div className="w-full h-full bg-gradient-to-r from-transparent via-blue-100/50 to-transparent dark:via-blue-900/40 rounded-lg"></div>
+          <div className="absolute inset-0 border-2 border-blue-200/30 dark:border-blue-700/30 rounded-lg"></div>
         </div>
         
         {/* Scrolling container */}
         <div className="flex gap-8 md:gap-12 animate-scroll-full">
           {/* First set of technologies */}
           {TECHNOLOGIES.map((technology, index) => (
-            <div key={`set1-${index}`} className="flex-shrink-0 transition-all duration-300 spotlight-item">
+            <div key={`set1-${index}`} className="flex-shrink-0 tech-logo">
               <TechDetails {...technology} />
             </div>
           ))}
           {/* Duplicate set for seamless loop */}
           {TECHNOLOGIES.map((technology, index) => (
-            <div key={`set2-${index}`} className="flex-shrink-0 transition-all duration-300 spotlight-item">
+            <div key={`set2-${index}`} className="flex-shrink-0 tech-logo">
               <TechDetails {...technology} />
             </div>
           ))}
@@ -42,57 +43,60 @@ const SkillsSection = () => {
       </div>
 
       <style jsx>{`
-        .spotlight-item {
-          filter: grayscale(100%);
+        .tech-logo {
+          filter: grayscale(100%) opacity(0.4);
+          transition: all 0.4s ease-in-out;
+          transform: scale(0.9);
         }
         
-        /* When item is in the spotlight area (middle 128px of container) */
-        @keyframes spotlight-check {
-          0%, 100% { 
-            transform: translateX(0);
+        /* Create spotlight effect using CSS clip-path and positioning */
+        .tech-logo {
+          position: relative;
+        }
+        
+        /* When a logo is in the center area (calculated based on animation progress) */
+        @keyframes spotlight-reveal {
+          0% { 
+            filter: grayscale(100%) opacity(0.4);
+            transform: scale(0.9);
+          }
+          47% { 
+            filter: grayscale(100%) opacity(0.4);
+            transform: scale(0.9);
+          }
+          50% { 
+            filter: grayscale(0%) opacity(1);
+            transform: scale(1.1);
+          }
+          53% { 
+            filter: grayscale(100%) opacity(0.4);
+            transform: scale(0.9);
+          }
+          100% { 
+            filter: grayscale(100%) opacity(0.4);
+            transform: scale(0.9);
           }
         }
         
-        /* Use CSS to detect when items are in the center spotlight */
-        .spotlight-item:nth-child(n) {
-          animation: spotlight-check 15s linear infinite;
-        }
+        /* Apply the spotlight animation to each logo with proper delay */
+        ${TECHNOLOGIES.map((_, index) => {
+          const delay = -(index * (15 / TECHNOLOGIES.length));
+          return `
+            .tech-logo:nth-child(${index + 1}) {
+              animation: spotlight-reveal 15s linear infinite ${delay}s;
+            }
+          `;
+        }).join('')}
         
-        /* Remove grayscale when in spotlight - this targets items at specific animation percentages */
-        @keyframes remove-grayscale-1 { 0% { filter: grayscale(0%); } 100% { filter: grayscale(0%); } }
-        @keyframes remove-grayscale-2 { 0% { filter: grayscale(0%); } 100% { filter: grayscale(0%); } }
-        
-        /* Apply different delays to each item so they get colored when passing through center */
-        .spotlight-item:nth-child(1) { animation-delay: 0s; }
-        .spotlight-item:nth-child(2) { animation-delay: -0.5s; }
-        .spotlight-item:nth-child(3) { animation-delay: -1s; }
-        .spotlight-item:nth-child(4) { animation-delay: -1.5s; }
-        .spotlight-item:nth-child(5) { animation-delay: -2s; }
-        .spotlight-item:nth-child(6) { animation-delay: -2.5s; }
-        .spotlight-item:nth-child(7) { animation-delay: -3s; }
-        .spotlight-item:nth-child(8) { animation-delay: -3.5s; }
-        .spotlight-item:nth-child(9) { animation-delay: -4s; }
-        .spotlight-item:nth-child(10) { animation-delay: -4.5s; }
-        .spotlight-item:nth-child(11) { animation-delay: -5s; }
-        .spotlight-item:nth-child(12) { animation-delay: -5.5s; }
-        .spotlight-item:nth-child(13) { animation-delay: -6s; }
-        .spotlight-item:nth-child(14) { animation-delay: -6.5s; }
-        .spotlight-item:nth-child(15) { animation-delay: -7s; }
-        .spotlight-item:nth-child(16) { animation-delay: -7.5s; }
-        .spotlight-item:nth-child(17) { animation-delay: -8s; }
-        .spotlight-item:nth-child(18) { animation-delay: -8.5s; }
-        .spotlight-item:nth-child(19) { animation-delay: -9s; }
-        .spotlight-item:nth-child(20) { animation-delay: -9.5s; }
-        .spotlight-item:nth-child(21) { animation-delay: -10s; }
-        .spotlight-item:nth-child(22) { animation-delay: -10.5s; }
-        .spotlight-item:nth-child(23) { animation-delay: -11s; }
-        .spotlight-item:nth-child(24) { animation-delay: -11.5s; }
-        .spotlight-item:nth-child(25) { animation-delay: -12s; }
-        .spotlight-item:nth-child(26) { animation-delay: -12.5s; }
-        .spotlight-item:nth-child(27) { animation-delay: -13s; }
-        .spotlight-item:nth-child(28) { animation-delay: -13.5s; }
-        .spotlight-item:nth-child(29) { animation-delay: -14s; }
-        .spotlight-item:nth-child(30) { animation-delay: -14.5s; }
+        /* Second set with offset delay */
+        ${TECHNOLOGIES.map((_, index) => {
+          const delay = -((index + TECHNOLOGIES.length) * (15 / TECHNOLOGIES.length));
+          return `
+            .tech-logo:nth-child(${index + 1 + TECHNOLOGIES.length}) {
+              animation: spotlight-reveal 15s linear infinite ${delay}s;
+            }
+          `;
+        }).join('')}
       `}</style>
     </Container>
   );
