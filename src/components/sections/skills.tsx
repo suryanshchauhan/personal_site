@@ -45,7 +45,7 @@ const SkillsSection = () => {
     };
 
     // Set up interval to check color changes
-    const interval = setInterval(handleScroll, 50);
+    const interval = setInterval(handleScroll, 100);
     handleScroll(); // Run initially
 
     return () => clearInterval(interval);
@@ -64,11 +64,7 @@ const SkillsSection = () => {
 
       <div ref={containerRef} className="relative overflow-hidden">
         <div 
-          className="flex gap-8 md:gap-12"
-          style={{
-            animation: 'scroll 30s linear infinite',
-            width: '200%'
-          }}
+          className="flex gap-8 md:gap-12 animate-scroll"
         >
           {/* First set of technologies */}
           {TECHNOLOGIES.map((technology, index) => (
