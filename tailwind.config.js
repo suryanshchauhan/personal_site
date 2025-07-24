@@ -67,6 +67,10 @@ module.exports = {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(calc(-100% / 3))' },
         },
+        'scroll-continuous': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
       },
       animation: {
         'drawer-open': 'open 0.3s ease-in-out',
@@ -76,6 +80,7 @@ module.exports = {
         'scroll-complete': 'scroll-complete 17s linear infinite',
         'scroll-simple': 'scroll-simple 17s linear infinite',
         'infinite-scroll': 'infinite-scroll 50s linear infinite',
+        'scroll-continuous': 'scroll-continuous 120s linear infinite',
       },
     },
   },
