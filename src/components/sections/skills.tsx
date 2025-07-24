@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useRef } from 'react';
 import { TECHNOLOGIES } from '@/lib/data';
 import Tag from '@/components/data-display/tag';
