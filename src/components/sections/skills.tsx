@@ -18,20 +18,30 @@ const SkillsSection = () => {
       const items = container.querySelectorAll('.tech-item');
       const containerRect = container.getBoundingClientRect();
       const centerX = containerRect.left + containerRect.width / 2;
+      let closestItem = null;
+      let closestDistance = Infinity;
 
+      // First pass: find the closest item to center
       items.forEach((item) => {
         const itemRect = item.getBoundingClientRect();
         const itemCenterX = itemRect.left + itemRect.width / 2;
         const distance = Math.abs(centerX - itemCenterX);
         
-        // Remove color from all items first
-        item.classList.add('grayscale');
-        
-        // Add color to the item closest to center (within threshold)
-        if (distance < 100) {
-          item.classList.remove('grayscale');
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestItem = item;
         }
       });
+
+      // Second pass: apply colors based on closest item
+      items.forEach((item) => {
+        item.classList.add('grayscale');
+      });
+
+      // Only color the single closest item
+      if (closestItem) {
+        closestItem.classList.remove('grayscale');
+      }
     };
 
     // Run initially and on animation frame
@@ -55,7 +65,9 @@ const SkillsSection = () => {
       </div>
 
       <div ref={containerRef} className="relative overflow-hidden">
-        <div className="flex animate-scroll-fast gap-8 md:gap-12">
+        <div className="flex gap-8 md:gap-12" style={{
+          animation: 'scroll-seamless 15s linear infinite'
+        }}>
           {/* First set of technologies */}
           {TECHNOLOGIES.map((technology, index) => (
             <div key={index} className="tech-item flex-shrink-0 grayscale transition-all duration-300">
@@ -65,6 +77,12 @@ const SkillsSection = () => {
           {/* Duplicate set for seamless loop */}
           {TECHNOLOGIES.map((technology, index) => (
             <div key={`duplicate-${index}`} className="tech-item flex-shrink-0 grayscale transition-all duration-300">
+              <TechDetails {...technology} />
+            </div>
+          ))}
+          {/* Triple set for ultra-smooth scrolling */}
+          {TECHNOLOGIES.map((technology, index) => (
+            <div key={`triple-${index}`} className="tech-item flex-shrink-0 grayscale transition-all duration-300">
               <TechDetails {...technology} />
             </div>
           ))}

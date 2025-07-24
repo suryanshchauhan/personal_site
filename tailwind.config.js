@@ -51,9 +51,9 @@ module.exports = {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },
         },
-        'scroll-fast': {
+        'scroll-seamless': {
           '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(-33.333%)' },
         },
       },
       animation: {
@@ -61,7 +61,7 @@ module.exports = {
         'drawer-close': 'close 0.3s ease-in-out',
         'waving-hand': 'waving 2s linear 3',
         'scroll': 'scroll 60s linear infinite',
-        'scroll-fast': 'scroll-fast 15s linear infinite',
+        'scroll-seamless': 'scroll-seamless 15s linear infinite',
       },
     },
   },
