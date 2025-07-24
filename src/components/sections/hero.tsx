@@ -37,11 +37,6 @@ const HeroSection = () => {
             </Typography>
           </div>
           <div className='flex flex-col gap-2'>
-            <div className='flex gap-2'>
-              <MapPin className='stroke-gray-600' />
-              <Typography>Indianapolis, IN</Typography>
-            </div>
-
             <div className='flex items-center gap-2 rounded-lg bg-emerald-50 px-3 py-2 dark:bg-emerald-900/20'>
               <div className='flex h-6 w-6 items-center justify-center'>
                 <span className='relative flex h-3 w-3'>
@@ -59,6 +54,11 @@ const HeroSection = () => {
                   Schedule a Meeting
                 </a>
               </Typography>
+            </div>
+
+            <div className='flex gap-2'>
+              <MapPin className='stroke-gray-600' />
+              <Typography>Indianapolis, IN</Typography>
             </div>
           </div>
           <SocialIcons />
