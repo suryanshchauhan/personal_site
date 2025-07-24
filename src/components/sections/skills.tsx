@@ -65,9 +65,9 @@ const SkillsSection = () => {
       </div>
 
       <div ref={containerRef} className="relative overflow-hidden">
-        <div className="flex gap-8 md:gap-12" style={{
-          animation: 'scroll-seamless 15s linear infinite'
-        }}>
+        <div 
+          className="flex gap-8 md:gap-12 animate-scroll-seamless"
+        >
           {/* First set of technologies */}
           {TECHNOLOGIES.map((technology, index) => (
             <div key={index} className="tech-item flex-shrink-0 grayscale transition-all duration-300">
