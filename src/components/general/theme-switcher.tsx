@@ -15,14 +15,8 @@ const ThemeSwitcher = () => {
   };
 
   useEffect(() => {
-    const darkmdTheme = window.matchMedia('(prefers-color-scheme: dark)');
-    if (darkmdTheme.matches) {
-      setTheme('dark');
-    } else {
-      setTheme('light');
-    }
     setMounted(true);
-  }, [setTheme]);
+  }, []);
 
   // until the UI is mounted, display a dummy icon
   if (!mounted) {
