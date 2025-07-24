@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
 import { TECHNOLOGIES } from '@/lib/data';
 import Tag from '@/components/data-display/tag';
 import TechDetails from '@/components/data-display/tech-details';
@@ -7,6 +8,47 @@ import Typography from '@/components/general/typography';
 import Container from '@/components/layout/container';
 
 const SkillsSection = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const updateSpotlight = () => {
+      if (!containerRef.current) return;
+
+      const container = containerRef.current;
+      const containerRect = container.getBoundingClientRect();
+      const centerX = containerRect.left + containerRect.width / 2;
+      const spotlightWidth = 160; // 40 * 4 (since we use w-40)
+
+      // Get all tech logos
+      const logos = container.querySelectorAll('.tech-logo');
+      
+      logos.forEach((logo) => {
+        const logoRect = logo.getBoundingClientRect();
+        const logoCenter = logoRect.left + logoRect.width / 2;
+        
+        // Check if logo center is within spotlight area
+        const isInSpotlight = Math.abs(logoCenter - centerX) < spotlightWidth / 2;
+        
+        if (isInSpotlight) {
+          logo.classList.add('in-spotlight');
+        } else {
+          logo.classList.remove('in-spotlight');
+        }
+      });
+    };
+
+    // Update spotlight position frequently
+    const interval = setInterval(updateSpotlight, 50);
+    
+    // Also update on scroll/resize
+    window.addEventListener('resize', updateSpotlight);
+    
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener('resize', updateSpotlight);
+    };
+  }, []);
+
   return (
     <Container id='skills'>
       <div className="flex flex-col items-center gap-4">
@@ -18,7 +60,7 @@ const SkillsSection = () => {
         </Typography>
       </div>
 
-      <div className="relative overflow-hidden py-8">
+      <div className="relative overflow-hidden py-8" ref={containerRef}>
         {/* Fixed spotlight area in the center */}
         <div className="absolute left-1/2 top-0 bottom-0 w-40 -translate-x-1/2 z-10 pointer-events-none">
           <div className="w-full h-full bg-gradient-to-r from-transparent via-blue-100/50 to-transparent dark:via-blue-900/40 rounded-lg"></div>
@@ -45,58 +87,14 @@ const SkillsSection = () => {
       <style jsx>{`
         .tech-logo {
           filter: grayscale(100%) opacity(0.4);
-          transition: all 0.4s ease-in-out;
           transform: scale(0.9);
+          transition: all 0.3s ease-in-out;
         }
         
-        /* Create spotlight effect using CSS clip-path and positioning */
-        .tech-logo {
-          position: relative;
+        .tech-logo.in-spotlight {
+          filter: grayscale(0%) opacity(1);
+          transform: scale(1.1);
         }
-        
-        /* When a logo is in the center area (calculated based on animation progress) */
-        @keyframes spotlight-reveal {
-          0% { 
-            filter: grayscale(100%) opacity(0.4);
-            transform: scale(0.9);
-          }
-          47% { 
-            filter: grayscale(100%) opacity(0.4);
-            transform: scale(0.9);
-          }
-          50% { 
-            filter: grayscale(0%) opacity(1);
-            transform: scale(1.1);
-          }
-          53% { 
-            filter: grayscale(100%) opacity(0.4);
-            transform: scale(0.9);
-          }
-          100% { 
-            filter: grayscale(100%) opacity(0.4);
-            transform: scale(0.9);
-          }
-        }
-        
-        /* Apply the spotlight animation to each logo with proper delay */
-        ${TECHNOLOGIES.map((_, index) => {
-          const delay = -(index * (15 / TECHNOLOGIES.length));
-          return `
-            .tech-logo:nth-child(${index + 1}) {
-              animation: spotlight-reveal 15s linear infinite ${delay}s;
-            }
-          `;
-        }).join('')}
-        
-        /* Second set with offset delay */
-        ${TECHNOLOGIES.map((_, index) => {
-          const delay = -((index + TECHNOLOGIES.length) * (15 / TECHNOLOGIES.length));
-          return `
-            .tech-logo:nth-child(${index + 1 + TECHNOLOGIES.length}) {
-              animation: spotlight-reveal 15s linear infinite ${delay}s;
-            }
-          `;
-        }).join('')}
       `}</style>
     </Container>
   );
