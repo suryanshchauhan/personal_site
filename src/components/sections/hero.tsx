@@ -56,9 +56,11 @@ const HeroSection = () => {
               </Typography>
             </div>
 
-            <div className='flex gap-2'>
+            <div className='mt-4'>
+              <div className='flex gap-2'>
               <MapPin className='stroke-gray-600' />
               <Typography>Indianapolis, IN</Typography>
+              </div>
             </div>
           </div>
           <SocialIcons />

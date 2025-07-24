@@ -19,12 +19,14 @@ const ExperienceSection = () => {
         </Typography>
       </div>
 
-      {EXPERIENCES?.map((experience, index) => (
-        <ExperienceDetails
-          {...experience}
-          key={index}
-        />
-      ))}
+      <div className='grid gap-6 md:gap-8'>
+        {EXPERIENCES?.map((experience, index) => (
+          <ExperienceDetails
+            {...experience}
+            key={index}
+          />
+        ))}
+      </div>
     </Container>
   );
 };
