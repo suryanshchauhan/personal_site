@@ -49,6 +49,56 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Analytics />
             <SpeedInsights />
           </main>
+          <script dangerouslySetInnerHTML={{
+            __html: `
+              // Add spotlight effect that highlights the center item
+              document.addEventListener('DOMContentLoaded', function() {
+                const container = document.querySelector('.spotlight-container');
+                const items = document.querySelectorAll('.spotlight-item');
+                
+                if (!container || !items.length) return;
+                
+                function updateSpotlight() {
+                  const containerRect = container.getBoundingClientRect();
+                  const containerCenter = containerRect.left + containerRect.width / 2;
+                  
+                  let closestItem = null;
+                  let closestDistance = Infinity;
+                  
+                  items.forEach(item => {
+                    const itemRect = item.getBoundingClientRect();
+                    const itemCenter = itemRect.left + itemRect.width / 2;
+                    const distance = Math.abs(itemCenter - containerCenter);
+                    
+                    if (distance < closestDistance) {
+                      closestDistance = distance;
+                      closestItem = item;
+                    }
+                  });
+                  
+                  // Remove spotlight from all items
+                  items.forEach(item => {
+                    const icon = item.querySelector('.tech-icon');
+                    if (icon) {
+                      icon.style.filter = 'grayscale(100%) opacity(0.4)';
+                    }
+                  });
+                  
+                  // Add spotlight to closest item
+                  if (closestItem) {
+                    const icon = closestItem.querySelector('.tech-icon');
+                    if (icon) {
+                      icon.style.filter = 'grayscale(0%) opacity(1)';
+                    }
+                  }
+                }
+                
+                // Update spotlight periodically
+                setInterval(updateSpotlight, 100);
+                updateSpotlight();
+              });
+            `
+          }} />
           <Footer />
         </Providers>
       </body>
