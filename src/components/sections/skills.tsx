@@ -20,20 +20,20 @@ const SkillsSection = () => {
 
       <div className="relative overflow-hidden py-8">
         {/* Gradient masks for smooth entry/exit */}
-        <div className="absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-gray to-transparent pointer-events-none"></div>
-        <div className="absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-gray to-transparent pointer-events-none"></div>
+        <div className="absolute left-0 top-0 z-10 h-full w-16 bg-gradient-to-r from-gray to-transparent pointer-events-none"></div>
+        <div className="absolute right-0 top-0 z-10 h-full w-16 bg-gradient-to-l from-gray to-transparent pointer-events-none"></div>
         
         {/* Scrolling container */}
-        <div className="flex gap-8 md:gap-12 animate-scroll-complete">
+        <div className="flex gap-8 md:gap-12 animate-scroll-simple">
           {/* First set of technologies */}
           {TECHNOLOGIES.map((technology, index) => (
-            <div key={`set1-${index}`} className="flex-shrink-0 w-28 md:w-32 flex justify-center">
+            <div key={`set1-${index}`} className="flex-shrink-0 w-32 md:w-36 flex justify-center">
               <TechDetails {...technology} />
             </div>
           ))}
           {/* Duplicate set for seamless loop */}
           {TECHNOLOGIES.map((technology, index) => (
-            <div key={`set2-${index}`} className="flex-shrink-0 w-28 md:w-32 flex justify-center">
+            <div key={`set2-${index}`} className="flex-shrink-0 w-32 md:w-36 flex justify-center">
               <TechDetails {...technology} />
             </div>
           ))}

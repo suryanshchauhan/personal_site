@@ -53,7 +53,15 @@ module.exports = {
         },
         'scroll-complete': {
           '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(calc(-28px * 33 - 2rem * 33))' },
+          '100%': { transform: 'translateX(calc(-24px * 33 - 2rem * 33))' },
+        },
+        'scroll-exact': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        'scroll-simple': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
       },
       animation: {
@@ -62,6 +70,7 @@ module.exports = {
         'waving-hand': 'waving 2s linear 3',
         'scroll': 'scroll 17s linear infinite',
         'scroll-complete': 'scroll-complete 17s linear infinite',
+        'scroll-simple': 'scroll-simple 17s linear infinite',
       },
     },
   },
