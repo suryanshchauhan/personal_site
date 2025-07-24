@@ -8,7 +8,7 @@ import Container from '@/components/layout/container';
 
 const HeroSection = () => {
   return (
-    <Container id='hero' className='pb-4 md:pb-6'>
+    <Container id='hero'>
       <div className='flex flex-col gap-12 md:flex-row'>
         {/* Image */}
         <div className='flex items-center justify-center md:order-last md:flex-grow md:justify-end'>
