@@ -9,7 +9,7 @@ const Container = React.forwardRef<HTMLElement, ContainerProps>(
     return (
       <section
         className={mergeClasses(
-          'w-full bg-gray py-12 md:py-16 2xl:py-20',
+          'w-full bg-gray py-8 md:py-10 2xl:py-12',
           className
         )}
         ref={ref}
