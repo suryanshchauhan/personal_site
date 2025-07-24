@@ -66,7 +66,8 @@ const SkillsSection = () => {
         <div 
           className="flex gap-8 md:gap-12"
           style={{
-            animation: 'scroll-seamless 15s linear infinite',
+            animation: 'scroll 30s linear infinite',
+            width: '200%'
           }}
         >
           {/* First set of technologies */}
@@ -78,12 +79,6 @@ const SkillsSection = () => {
           {/* Duplicate set for seamless loop */}
           {TECHNOLOGIES.map((technology, index) => (
             <div key={`set2-${index}`} className="tech-item flex-shrink-0 grayscale transition-all duration-300">
-              <TechDetails {...technology} />
-            </div>
-          ))}
-          {/* Triple set for ultra-smooth scrolling */}
-          {TECHNOLOGIES.map((technology, index) => (
-            <div key={`set3-${index}`} className="tech-item flex-shrink-0 grayscale transition-all duration-300">
               <TechDetails {...technology} />
             </div>
           ))}

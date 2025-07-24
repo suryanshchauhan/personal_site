@@ -51,17 +51,12 @@ module.exports = {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },
         },
-        'scroll-seamless': {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-33.333%)' },
-        },
       },
       animation: {
         'drawer-open': 'open 0.3s ease-in-out',
         'drawer-close': 'close 0.3s ease-in-out',
         'waving-hand': 'waving 2s linear 3',
-        'scroll': 'scroll 60s linear infinite',
-        'scroll-seamless': 'scroll-seamless 15s linear infinite',
+        'scroll': 'scroll 30s linear infinite',
       },
     },
   },
