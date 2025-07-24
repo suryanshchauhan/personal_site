@@ -17,7 +17,7 @@ const TechDetails = ({ url, logo, darkModeLogo, label }: TechDetails) => {
           src={logo}
           srcForDarkMode={darkModeLogo}
           alt={label}
-          className='transition-transform duration-300 md:hover:scale-110'
+          className='transition-all duration-300 md:hover:scale-110 tech-icon'
         />
       </Link>
       <Typography variant='body1'>{label}</Typography>

@@ -21,12 +21,17 @@ const SkillsSection = () => {
         <div className="absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-gray to-transparent pointer-events-none"></div>
         <div className="absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-gray to-transparent pointer-events-none"></div>
         
+        {/* Center spotlight overlay */}
+        <div className="absolute left-1/2 top-0 z-20 h-full w-32 -translate-x-1/2 pointer-events-none">
+          <div className="h-full w-full bg-gradient-to-r from-transparent via-transparent to-transparent"></div>
+        </div>
+        
         {/* Continuous scrolling strip */}
-        <div className="flex gap-8 md:gap-12 animate-scroll-seamless" style={{ width: 'max-content' }}>
+        <div className="flex gap-8 md:gap-12 animate-scroll-seamless carousel-container" style={{ width: 'max-content' }}>
           {/* Repeat technologies multiple times for continuous effect */}
           {Array.from({ length: 6 }).map((_, setIndex) => 
             TECHNOLOGIES.map((technology, techIndex) => (
-              <div key={`${setIndex}-${techIndex}`} className="flex-shrink-0 w-24 md:w-28 flex justify-center">
+              <div key={`${setIndex}-${techIndex}`} className="flex-shrink-0 w-24 md:w-28 flex justify-center carousel-item">
                 <TechDetails {...technology} />
               </div>
             ))
