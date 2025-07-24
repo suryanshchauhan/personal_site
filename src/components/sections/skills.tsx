@@ -6,7 +6,7 @@ import { TECHNOLOGIES } from '@/lib/data';
 
 const SkillsSection = () => {
   return (
-    <Container id='skills'>
+    <Container id='skills' className='py-6 md:py-8 2xl:py-10'>
       <div className="flex flex-col items-center gap-4">
         <div className="self-center">
           <Tag label="Skills" />
