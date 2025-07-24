@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Copy, Mail, Phone } from 'lucide-react';
 import Link from 'next/link';
 
@@ -19,8 +19,13 @@ type CopyValue = 'email' | 'phone';
 
 const ContactSection = () => {
   const { width } = useWindowSize();
+  const [mounted, setMounted] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
   const [copiedValueType, setCopiedValueType] = useState<CopyValue | null>(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleCopyClick = async (text: string, type: CopyValue) => {
     try {
@@ -61,7 +66,7 @@ const ContactSection = () => {
               <Typography variant='h2'>{email}</Typography>
             </Link>
             <IconButton
-              size={width && width < 768 ? 'md' : 'lg'}
+              size={mounted && width && width < 768 ? 'md' : 'lg'}
               onClick={() => handleCopyClick(email, 'email')}
               showTooltip={isCopied && copiedValueType === 'email'}
               tooltipText='Copied!'

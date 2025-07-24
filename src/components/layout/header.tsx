@@ -24,8 +24,13 @@ const Logo = () => (
 
 const Header = () => {
   const scrolled = useScroll(40);
+  const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const size = useWindowSize();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // close sidebar if open in screen size < 768px
   useEffect(() => {
@@ -38,7 +43,7 @@ const Header = () => {
     <header
       className={mergeClasses(
         'sticky top-0 z-30 w-full border-b border-transparent bg-gray max-md:border-gray-100',
-        scrolled ? 'bg-gray/50 backdrop-blur-xl md:border-gray-100' : ''
+        mounted && scrolled ? 'bg-gray/50 backdrop-blur-xl md:border-gray-100' : ''
       )}
     >
       <div className='mx-auto flex w-full max-w-7xl items-center justify-between p-4 md:px-8'>
