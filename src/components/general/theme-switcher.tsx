@@ -26,7 +26,6 @@ const ThemeSwitcher = () => {
       </IconButton>
     );
   }
-  console.log('theme', theme);
   return <IconButton onClick={toggleTheme}>{theme === 'dark' ? <Sun /> : <MoonStar />}</IconButton>;
 };
 
