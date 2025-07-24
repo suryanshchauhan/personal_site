@@ -85,7 +85,7 @@ module.exports = {
         'scroll-simple': 'scroll-simple 17s linear infinite',
         'infinite-scroll': 'infinite-scroll 50s linear infinite',
         'scroll-continuous': 'scroll-continuous 66s linear infinite',
-        'scroll-seamless': 'scroll-seamless 62.5s linear infinite',
+        'scroll-seamless': 'scroll-seamless 78.125s linear infinite',
       },
     },
   },
