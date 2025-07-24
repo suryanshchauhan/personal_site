@@ -69,7 +69,7 @@ module.exports = {
         },
         'scroll-continuous': {
           '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-33.33%)' },
+          '100%': { transform: 'translateX(calc(-100% / 3))' },
         },
       },
       animation: {
@@ -80,7 +80,7 @@ module.exports = {
         'scroll-complete': 'scroll-complete 17s linear infinite',
         'scroll-simple': 'scroll-simple 17s linear infinite',
         'infinite-scroll': 'infinite-scroll 50s linear infinite',
-        'scroll-continuous': 'scroll-continuous 15s linear infinite',
+        'scroll-continuous': 'scroll-continuous 66s linear infinite',
       },
     },
   },
