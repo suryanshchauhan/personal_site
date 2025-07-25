@@ -15,7 +15,6 @@ const translations: { [key: string]: string } = {
   "Making pretty software ✨ using cutting-edge fullstack and front-end technologies for agentic AI platforms.": "Erstelle schöne Software ✨ mit modernsten Fullstack- und Frontend-Technologien für agentische KI-Plattformen.",
   "United States of America": "Vereinigte Staaten von Amerika",
   "indianapolis": "indianapolis",
-  "Location": "Standort",
   
   // Skills Section
   "Skills": "Fähigkeiten",
