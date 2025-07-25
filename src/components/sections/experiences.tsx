@@ -27,16 +27,8 @@ const ExperienceSection = () => {
 
       {/* Experience layout with logos on the right */}
       <div className='flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto'>
-        {/* Selected experience details */}
-        <div className='flex-1'>
-          <ExperienceDetails
-            {...EXPERIENCES[selectedExperience]}
-            key={selectedExperience}
-          />
-        </div>
-        
-        {/* Company logos column */}
-        <div className='flex flex-row lg:flex-col items-center justify-center gap-4 lg:max-w-xs'>
+        {/* Company logos column - moved to left */}
+        <div className='flex flex-row lg:flex-col items-center justify-center gap-4 lg:max-w-xs order-2 lg:order-1'>
           {EXPERIENCES?.map((experience, index) => (
             <button
               key={index}
@@ -55,6 +47,14 @@ const ExperienceSection = () => {
               />
             </button>
           ))}
+        </div>
+        
+        {/* Selected experience details */}
+        <div className='flex-1 order-1 lg:order-2'>
+          <ExperienceDetails
+            {...EXPERIENCES[selectedExperience]}
+            key={selectedExperience}
+          />
         </div>
       </div>
     </Container>
