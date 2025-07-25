@@ -68,7 +68,7 @@ const HeroSection = () => {
           </div>
           <div className='flex flex-col gap-4'>
             {/* Currently Status Card */}
-            <div className='rounded-xl bg-gray-100 p-6 dark:bg-gray-900 dark:text-white'>
+            <div className='rounded-xl bg-gray-900 p-6 text-white dark:bg-gray-100'>
               <Typography variant='h3' className='text-white dark:text-gray-900 mb-4'>
                 Currently
               </Typography>
@@ -76,19 +76,19 @@ const HeroSection = () => {
                 <Typography className='text-white dark:text-gray-900 font-medium'>
                   Software Engineer at
                 </Typography>
-                <div className='rounded-md bg-gray-200 px-3 py-1 dark:bg-gray-700 transition-all duration-300 hover:scale-110 hover:bg-gray-300 dark:hover:bg-gray-600 cursor-pointer'>
+                <div className='rounded-md bg-gray-700 px-3 py-1 dark:bg-gray-200 transition-all duration-300 hover:scale-110 hover:bg-black dark:hover:bg-gray-800 cursor-pointer'>
                   <Typography className='text-white dark:text-gray-900 text-sm font-medium hover:text-white dark:hover:text-black'>
                     Eknoor Trans ↗
                   </Typography>
                 </div>
               </div>
-              <Typography className='text-gray-600 dark:text-gray-300 text-sm leading-relaxed'>
+              <Typography className='text-gray-300 dark:text-gray-600 text-sm leading-relaxed'>
                 Developing web tools that keep trucks rolling, glitches rare, and the ops team smiling.
               </Typography>
             </div>
 
             {/* Location Card */}
-            <div className='rounded-xl bg-gray-100 p-6 dark:bg-gray-900 dark:text-white'>
+            <div className='rounded-xl bg-gray-900 p-6 text-white dark:bg-gray-100'>
               <div className='flex items-center justify-between'>
                 <div className='flex items-center gap-3'>
                   <Navigation 
@@ -99,7 +99,7 @@ const HeroSection = () => {
                     }}
                   />
                   <div className='ml-2'>
-                    <Typography className='text-gray-600 dark:text-gray-300 text-sm'>
+                    <Typography className='text-gray-300 dark:text-gray-700 text-sm'>
                       🇺🇸 United States of America
                     </Typography>
                     <Typography variant='h3' className='text-white dark:text-gray-900'>
@@ -108,7 +108,7 @@ const HeroSection = () => {
                   </div>
                 </div>
                 <div className='text-right'>
-                  <Typography className='text-gray-900 dark:text-white text-base font-semibold'>
+                  <Typography className='text-white dark:text-gray-900 text-base font-semibold'>
                     {currentTime}
                   </Typography>
                 </div>
