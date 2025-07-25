@@ -73,11 +73,11 @@ const HeroSection = () => {
               </Typography>
               <div className='flex items-center gap-3 mb-4'>
                 <Typography className='text-white dark:text-gray-900 font-medium'>
-                  Full Stack Engineer at
+                  Software Engineer at
                 </Typography>
                 <div className='rounded-md bg-gray-700 px-3 py-1 dark:bg-gray-200'>
                   <Typography className='text-white dark:text-gray-900 text-sm font-medium'>
-                    Levangie Laboratories ↗
+                    Eknoor Trans ↗
                   </Typography>
                 </div>
               </div>
@@ -99,7 +99,7 @@ const HeroSection = () => {
                       🇺🇸 United States of America
                     </Typography>
                     <Typography variant='h3' className='text-white dark:text-gray-900'>
-                      east coast
+                      indianapolis
                     </Typography>
                   </div>
                 </div>
