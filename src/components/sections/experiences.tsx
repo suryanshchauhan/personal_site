@@ -18,7 +18,7 @@ const ExperienceSection = () => {
           variant='subtitle'
           className='max-w-xl text-center'
         >
-          Here is a quick summary of my most recent experiences:
+          Here are the places where I've worked:
         </Typography>
       </div>
 
