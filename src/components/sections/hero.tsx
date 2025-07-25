@@ -62,9 +62,13 @@ const HeroSection = () => {
         {/* Content */}
         <div className='flex max-w-3xl flex-grow flex-col justify-center gap-8 md:order-first md:items-start md:justify-center 2xl:gap-12'>
           <div className='flex flex-col gap-2'>
-            <Typography variant='h1' className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold md:font-bold md:tracking-[-0.02em] lg:leading-[72px] text-gray-900'>
-              <span>Hi, I&apos;m Suryansh</span> <span className='inline-block animate-waving-hand'>👋</span>
-            </Typography>
+            <div className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold md:font-bold md:tracking-[-0.02em] lg:leading-[72px] text-gray-900'>
+              <Typography variant='h1' component='span' className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold md:font-bold md:tracking-[-0.02em] lg:leading-[72px] text-gray-900'>
+                Hi, I&apos;m Suryansh
+              </Typography>
+              {' '}
+              <span className='inline-block animate-waving-hand'>👋</span>
+            </div>
           </div>
           <div className='flex flex-col gap-4'>
             {/* Currently Status Card */}
