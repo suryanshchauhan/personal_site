@@ -64,12 +64,6 @@ const HeroSection = () => {
             <Typography variant='h1'>
               Hi, I&apos;m Suryansh <span className='inline-block animate-waving-hand'>👋</span>
             </Typography>
-            <Typography>
-            Hi there! I&apos;m Suryansh Chauhan, a recent Computer Science graduate from DePauw University in Indiana. 
-            I&apos;m passionate about creating innovative web and software solutions that make a difference. 
-            While my main focus is on development, I also have a keen interest in data analytics and technology consulting. 
-            Check out my projects, and feel free to connect—I&apos;m excited to explore new opportunities and collaborate on impactful tech ventures! 🚀
-            </Typography>
           </div>
           <div className='flex flex-col gap-4'>
             {/* Currently Status Card */}
