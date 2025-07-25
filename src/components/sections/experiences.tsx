@@ -35,8 +35,8 @@ const ExperienceSection = () => {
               onClick={() => setSelectedExperience(index)}
               className={`flex items-center justify-center p-4 rounded-xl transition-all duration-200 hover:bg-white hover:shadow-md w-20 h-20 lg:w-full lg:h-20 ${
                 selectedExperience === index 
-                  ? 'bg-black shadow-lg ring-2 ring-black/20' 
-                  : 'bg-gray-100 hover:bg-black hover:shadow-lg'
+                  ? 'bg-white shadow-lg ring-2 ring-gray-900/20 dark:bg-black dark:ring-black/20' 
+                  : 'bg-gray-100 hover:bg-white hover:shadow-lg dark:hover:bg-black'
               }`}
             >
               <ImageWrapper
