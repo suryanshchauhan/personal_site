@@ -4,7 +4,7 @@ import * as React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 
 import { mergeClasses } from '@/lib/utils';
-import { useTranslation } from '@/components/layout/header';
+import { useTranslation } from '@/lib/providers';
 
 // Translation dictionary
 const translations: { [key: string]: string } = {
