@@ -112,12 +112,17 @@ const HeroSection = () => {
                     <Typography className='text-gray-600 dark:text-gray-700 text-xs sm:text-sm'>
                       🇺🇸 United States of America
                     </Typography>
-                    <Typography variant='h3' className='text-gray-900 dark:text-gray-900 text-xl sm:text-2xl md:text-3xl'>
-                      indianapolis
-                    </Typography>
+                    <div className='flex flex-col sm:flex-row sm:items-baseline sm:gap-2'>
+                      <Typography variant='h3' className='text-gray-900 dark:text-gray-900 text-xl sm:text-2xl md:text-3xl'>
+                        indianapolis
+                      </Typography>
+                      <Typography className='text-gray-900 dark:text-gray-900 text-sm sm:hidden font-normal'>
+                        {currentTime}
+                      </Typography>
+                    </div>
                   </div>
                 </div>
-                <div className='text-right'>
+                <div className='text-right hidden sm:block'>
                   <Typography className='text-gray-900 dark:text-gray-900 text-sm sm:text-base font-semibold'>
                     {currentTime}
                   </Typography>
