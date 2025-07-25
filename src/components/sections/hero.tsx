@@ -91,10 +91,10 @@ const HeroSection = () => {
               <div className='flex items-center justify-between'>
                 <div className='flex items-center gap-3'>
                   <Navigation 
-                    className='w-10 h-10 text-blue-400 transition-all duration-500 ease-out drop-shadow-lg hover:text-blue-300 hover:scale-110' 
+                    className='w-10 h-10 text-gray-200 transition-all duration-500 ease-out drop-shadow-lg hover:text-gray-300 hover:scale-110' 
                     style={{ 
                       transform: `rotate(${scrollY * 0.8}deg) scale(${1 + Math.sin(scrollY * 0.01) * 0.1})`,
-                      filter: `drop-shadow(0 0 8px rgba(59, 130, 246, 0.3))`
+                      filter: `drop-shadow(0 0 8px rgba(229, 231, 235, 0.3))`
                     }}
                   />
                   <div className='ml-2'>
