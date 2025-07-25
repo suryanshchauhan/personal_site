@@ -372,7 +372,7 @@ export const EXPERIENCES: ExperienceDetails[] = [
   {
     logo: LogoHrtc,
     logoAlt: 'Himachal Road Transport Corporation (HRTC)',
-    position: 'STEM Liaison',
+    position: 'Software Engineer Intern',
     startDate: new Date('2021-11-01'),
     endDate: new Date('2022-12-31'),
     summary: [
