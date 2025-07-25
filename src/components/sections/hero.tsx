@@ -9,11 +9,13 @@ import SocialIcons from '@/components/data-display/social-icons';
 import Typography from '@/components/general/typography';
 import Container from '@/components/layout/container';
 import useScroll from '@/hooks/use-scroll';
+import { useTranslation } from '@/lib/providers';
 
 const HeroSection = () => {
   const [currentTime, setCurrentTime] = useState('');
   const scrolled = useScroll(0);
   const [scrollY, setScrollY] = useState(0);
+  const { isGerman } = useTranslation();
 
   useEffect(() => {
     const updateTime = () => {
@@ -62,8 +64,12 @@ const HeroSection = () => {
         {/* Content */}
         <div className='flex max-w-3xl flex-grow flex-col justify-center gap-8 md:order-first md:items-start md:justify-center 2xl:gap-12'>
           <div className='flex flex-col gap-2'>
-            <div className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold md:font-bold md:tracking-[-0.02em] lg:leading-[72px] text-gray-900'>
-              <Typography variant='h1' component='span' className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold md:font-bold md:tracking-[-0.02em] lg:leading-[72px] text-gray-900'>
+            <div className={`${isGerman ? 'text-2xl sm:text-3xl md:text-4xl lg:text-5xl' : 'text-3xl sm:text-4xl md:text-5xl lg:text-6xl'} font-semibold md:font-bold md:tracking-[-0.02em] lg:leading-[72px] text-gray-900`}>
+              <Typography 
+                component='span' 
+                className={`${isGerman ? 'text-2xl sm:text-3xl md:text-4xl lg:text-5xl' : 'text-3xl sm:text-4xl md:text-5xl lg:text-6xl'} font-semibold md:font-bold md:tracking-[-0.02em] lg:leading-[72px] text-gray-900`}
+                noTranslate={false}
+              >
                 Hi, I&apos;m Suryansh
               </Typography>
               {' '}
