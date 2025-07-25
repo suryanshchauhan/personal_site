@@ -44,6 +44,13 @@ const translations: { [key: string]: string } = {
   "Data Science Intern": "Data Science Praktikant",
   "STEM Liaison": "STEM-Verbindungsbeauftragte",
   "Software Engineer Intern": "Software-Ingenieur Praktikant",
+  
+  // Project Descriptions
+  "Streamline your job search with this web app. Log & organize applications and get insights into your job hunt. User-friendly interface with a dashboard and detailed views. Save time, reduce stress, and land your dream job.": "Optimieren Sie Ihre Jobsuche mit dieser Web-App. Protokollieren und organisieren Sie Bewerbungen und erhalten Sie Einblicke in Ihre Jobsuche. Benutzerfreundliche Oberfläche mit Dashboard und detaillierten Ansichten. Sparen Sie Zeit, reduzieren Sie Stress und landen Sie Ihren Traumjob.",
+  "\"TIL\" is a web app for users to share and upvote/downvote interesting facts. It features category-based filtering for efficient fact browsing.": "\"TIL\" ist eine Web-App für Benutzer, um interessante Fakten zu teilen und zu bewerten. Sie bietet kategoriebasierte Filterung für effizientes Durchsuchen von Fakten.",
+  "A full-stack budget management application with user authentication, account creation, budget tracking, and secure data management using Supabase.": "Eine Full-Stack-Budgetverwaltungsanwendung mit Benutzerauthentifizierung, Kontoerstellung, Budgetverfolgung und sicherer Datenverwaltung mit Supabase.",
+  "COVID stats (visual) for every country - Total Cases Per Million, New Cases Per Million, Total Deaths Per Million, Total Tests Per Million using RShiny with an option of date range. You can hover over countries, zoom in/zoom out etc.": "COVID-Statistiken (visuell) für jedes Land - Gesamtfälle pro Million, neue Fälle pro Million, Gesamttodesfälle pro Million, Gesamttests pro Million mit RShiny mit einer Option für Datumsbereich. Sie können über Länder schweben, hinein-/herauszoomen usw.",
+  "Comprehensive analysis of the 2023-24 Premier League season using data-driven insights and predictive models to forecast team standings and player performances, enhancing understanding and enjoyment of the league.": "Umfassende Analyse der Premier League-Saison 2023-24 mit datengesteuerten Erkenntnissen und Vorhersagemodellen zur Prognose von Teamplatzierungen und Spielerleistungen, um das Verständnis und den Genuss der Liga zu verbessern.",
 };
 
 const translateText = (text: string, isGerman: boolean): string => {
