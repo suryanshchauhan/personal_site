@@ -111,7 +111,6 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-          <SocialIcons />
         </div>
       </div>
     </Container>
