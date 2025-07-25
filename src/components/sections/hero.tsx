@@ -82,7 +82,7 @@ const HeroSection = () => {
                 </div>
               </div>
               <Typography className='text-gray-300 dark:text-gray-600 text-sm leading-relaxed'>
-                Making pretty software ✨ using cutting-edge fullstack and front-end technologies for agentic AI platforms.
+                Developing web tools that keep trucks rolling, glitches rare, and the ops team smiling.
               </Typography>
             </div>
 
