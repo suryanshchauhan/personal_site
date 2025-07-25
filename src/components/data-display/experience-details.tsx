@@ -3,6 +3,7 @@
 import Typography from '@/components/general/typography';
 import ImageWrapper from '@/components/data-display/image-wrapper';
 import Card from '@/components/layout/card';
+import Link from '@/components/navigation/link';
 import { ExperienceDetails as ExperienceDetailsProps } from '@/lib/types';
 
 const dateFormatOptions: Intl.DateTimeFormatOptions = {
@@ -21,16 +22,46 @@ const ExperienceDetails = ({
   summary,
 }: ExperienceDetailsProps) => {
 
+  // Map company names to URLs
+  const getCompanyUrl = (logoAlt: string) => {
+    const urlMap: { [key: string]: string } = {
+      'Alleo': 'https://www.withalleo.com/',
+      'TechPoint': 'https://techpoint.org/',
+      'DataProphet': 'https://dataprophet.com/',
+      'DePauw University': 'https://www.depauw.edu/',
+      'Himachal Road Transport Corporation (HRTC)': 'https://www.hrtchp.com/',
+    };
+    return urlMap[logoAlt];
+  };
+
+  const companyUrl = getCompanyUrl(logoAlt);
+
   return (
     <Card className="mx-auto w-full overflow-hidden transition-all duration-300 hover:shadow-lg">
       <div className="flex items-center gap-6 md:gap-8 p-6 md:p-8">
         <div className="flex-shrink-0">
-          <ImageWrapper
-            src={logo}
-            srcForDarkMode={darkModeLogo}
-            alt={logoAlt}
-            className="max-w-[60px] md:max-w-[80px]"
-          />
+          {companyUrl ? (
+            <Link
+              href={companyUrl}
+              externalLink
+              noCustomization
+              className="block transition-transform duration-200 hover:scale-110"
+            >
+              <ImageWrapper
+                src={logo}
+                srcForDarkMode={darkModeLogo}
+                alt={logoAlt}
+                className="max-w-[60px] md:max-w-[80px]"
+              />
+            </Link>
+          ) : (
+            <ImageWrapper
+              src={logo}
+              srcForDarkMode={darkModeLogo}
+              alt={logoAlt}
+              className="max-w-[60px] md:max-w-[80px]"
+            />
+          )}
         </div>
         <div className="flex flex-col gap-2 md:gap-3">
           <Typography variant="subtitle" className="font-semibold text-gray-900">
