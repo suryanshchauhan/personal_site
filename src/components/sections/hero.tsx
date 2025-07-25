@@ -79,10 +79,10 @@ const HeroSection = () => {
           <div className='flex flex-col gap-4'>
             {/* Currently Status Card */}
             <div className='rounded-xl bg-gray-100 p-4 md:p-6 dark:bg-gray-100'>
-              <Typography variant='h3' className='text-gray-900 dark:text-gray-900 mb-4'>
+              <Typography className='text-gray-900 dark:text-gray-900 font-medium whitespace-nowrap'>
                 Currently
               </Typography>
-              <div className='flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-4'>
+              <div className='rounded-md bg-gray-200 px-3 py-1 dark:bg-gray-200 transition-all duration-300 hover:scale-110 hover:bg-gray-300 dark:hover:bg-gray-800 cursor-pointer self-start whitespace-nowrap'>
                 <Typography className='text-gray-900 dark:text-gray-900 font-medium'>
                   Software Engineer at
                 </Typography>
@@ -112,15 +112,15 @@ const HeroSection = () => {
                     <Typography className='text-gray-600 dark:text-gray-700 text-xs sm:text-sm'>
                       🇺🇸 United States of America
                     </Typography>
-                    <Typography variant='h3' className='text-gray-900 dark:text-gray-900 text-xl sm:text-2xl md:text-3xl'>
-                      indianapolis
-                    </Typography>
+                    <div className='flex items-center gap-2'>
+                      <Typography variant='h3' className='text-gray-900 dark:text-gray-900 text-xl sm:text-2xl md:text-3xl'>
+                        indianapolis
+                      </Typography>
+                      <Typography className='text-gray-900 dark:text-gray-900 text-sm sm:text-base font-normal'>
+                        {currentTime}
+                      </Typography>
+                    </div>
                   </div>
-                </div>
-                <div className='text-right'>
-                  <Typography className='text-gray-900 dark:text-gray-900 text-sm sm:text-base font-semibold'>
-                    {currentTime}
-                  </Typography>
                 </div>
               </div>
             </div>
