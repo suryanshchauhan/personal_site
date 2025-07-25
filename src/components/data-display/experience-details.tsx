@@ -26,21 +26,21 @@ const ExperienceDetails = ({
   return (
     <Card className="mx-auto w-full h-full overflow-hidden transition-all duration-300 hover:shadow-lg flex flex-col">
       {/* Header */}
-      <div className="flex items-center gap-6 md:gap-8 p-6 md:p-8 border-b border-gray-100 flex-shrink-0">
+      <div className="flex items-center gap-8 md:gap-12 p-8 md:p-12 border-b border-gray-100 flex-shrink-0">
         <div className="flex-shrink-0">
           <ImageWrapper
             src={logo}
             srcForDarkMode={darkModeLogo}
             alt={logoAlt}
-            className="max-w-[80px] md:max-w-[100px]"
+            className="max-w-[100px] md:max-w-[140px] lg:max-w-[160px]"
           />
         </div>
-        <div className="flex flex-col gap-2">
-          <Typography variant="subtitle" className="font-semibold text-gray-900">
+        <div className="flex flex-col gap-3 md:gap-4">
+          <Typography variant="h3" className="font-bold text-gray-900">
             {position}
           </Typography>
-          <div className="flex flex-col gap-1">
-            <Typography className="text-gray-700 font-medium">
+          <div className="flex flex-col gap-2">
+            <Typography variant="subtitle" className="text-gray-700 font-semibold">
               {new Intl.DateTimeFormat('en-US', dateFormatOptions).format(
                 startDate
               )}{' '}
@@ -55,11 +55,11 @@ const ExperienceDetails = ({
             </Typography>
             {currentlyWorkHere && (
               <div className="flex items-center gap-1">
-                <span className="relative flex h-2 w-2">
+                <span className="relative flex h-3 w-3">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
+                  <span className="relative inline-flex h-3 w-3 rounded-full bg-green-500"></span>
                 </span>
-                <Typography variant="body3" className="text-green-600 font-medium">
+                <Typography variant="body2" className="text-green-600 font-semibold">
                   Current
                 </Typography>
               </div>
