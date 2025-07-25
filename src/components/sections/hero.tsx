@@ -68,47 +68,47 @@ const HeroSection = () => {
           </div>
           <div className='flex flex-col gap-4'>
             {/* Currently Status Card */}
-            <div className='rounded-xl bg-gray-100 p-4 md:p-6 dark:bg-gray-100'>
+            <div className='rounded-xl bg-gray-100 p-3 sm:p-4 md:p-6 lg:p-8 dark:bg-gray-100'>
               <Typography variant='h3' className='text-gray-900 dark:text-gray-900 mb-4'>
                 Currently
               </Typography>
-              <div className='flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-4'>
-                <Typography className='text-gray-900 dark:text-gray-900 font-medium'>
+              <div className='flex flex-col gap-3 mb-4'>
+                <Typography className='text-gray-900 dark:text-gray-900 font-medium text-sm sm:text-base'>
                   Software Engineer at
                 </Typography>
-                <div className='rounded-md bg-gray-200 px-3 py-1 dark:bg-gray-200 transition-all duration-300 hover:scale-110 hover:bg-gray-300 dark:hover:bg-gray-800 cursor-pointer self-start'>
-                  <Typography className='text-gray-900 dark:text-gray-900 text-xs sm:text-sm font-medium hover:text-gray-900 dark:hover:text-black'>
+                <div className='rounded-md bg-gray-200 px-2 py-1 sm:px-3 sm:py-1.5 dark:bg-gray-200 transition-all duration-300 hover:scale-110 hover:bg-gray-300 dark:hover:bg-gray-800 cursor-pointer self-start'>
+                  <Typography className='text-gray-900 dark:text-gray-900 text-xs sm:text-sm font-medium hover:text-white dark:hover:text-black'>
                     Eknoor Trans ↗
                   </Typography>
                 </div>
               </div>
-              <Typography className='text-gray-600 dark:text-gray-600 text-xs sm:text-sm leading-relaxed'>
+              <Typography className='text-gray-600 dark:text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed'>
                 Developing web tools that keep trucks rolling, glitches rare, and the ops team smiling.
               </Typography>
             </div>
 
             {/* Location Card */}
-            <div className='rounded-xl bg-gray-100 p-4 md:p-6 dark:bg-gray-100'>
+            <div className='rounded-xl bg-gray-100 p-3 sm:p-4 md:p-6 lg:p-8 dark:bg-gray-100'>
               <div className='flex items-center justify-between'>
-                <div className='flex items-center gap-2 sm:gap-3'>
+                <div className='flex items-center gap-2 sm:gap-3 md:gap-4'>
                   <Navigation 
-                    className='w-8 h-8 sm:w-10 sm:h-10 text-gray-700 transition-all duration-500 ease-out drop-shadow-lg hover:text-gray-600 hover:scale-110' 
+                    className='w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-gray-700 transition-all duration-500 ease-out drop-shadow-lg hover:text-gray-600 hover:scale-110' 
                     style={{ 
                       transform: `rotate(${scrollY * 0.8}deg) scale(${1 + Math.sin(scrollY * 0.01) * 0.1})`,
                       filter: `drop-shadow(0 0 8px rgba(55, 65, 81, 0.3))`
                     }}
                   />
-                  <div className='ml-1 sm:ml-2'>
-                    <Typography className='text-gray-600 dark:text-gray-700 text-xs sm:text-sm'>
+                  <div className='ml-1 sm:ml-2 md:ml-3'>
+                    <Typography className='text-gray-600 dark:text-gray-700 text-xs sm:text-sm md:text-base'>
                       🇺🇸 United States of America
                     </Typography>
-                    <Typography variant='h3' className='text-gray-900 dark:text-gray-900 text-xl sm:text-2xl md:text-3xl'>
+                    <Typography variant='h3' className='text-gray-900 dark:text-gray-900 text-lg sm:text-xl md:text-2xl lg:text-3xl'>
                       indianapolis
                     </Typography>
                   </div>
                 </div>
                 <div className='text-right'>
-                  <Typography className='text-gray-900 dark:text-gray-900 text-sm sm:text-base font-semibold'>
+                  <Typography className='text-gray-900 dark:text-gray-900 text-xs sm:text-sm md:text-base font-semibold'>
                     {currentTime}
                   </Typography>
                 </div>
