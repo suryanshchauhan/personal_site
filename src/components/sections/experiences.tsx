@@ -50,7 +50,7 @@ const ExperienceSection = () => {
         </div>
         
         {/* Selected experience details */}
-        <div className='flex-1 order-1 lg:order-2 lg:h-full'>
+        <div className='flex-1 order-1 lg:order-2'>
           <ExperienceDetails
             {...EXPERIENCES[selectedExperience]}
             key={selectedExperience}

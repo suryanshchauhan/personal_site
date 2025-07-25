@@ -24,7 +24,7 @@ const ExperienceDetails = ({
 }: ExperienceDetailsProps) => {
 
   return (
-    <Card className="mx-auto w-full h-full overflow-hidden transition-all duration-300 hover:shadow-lg flex flex-col">
+    <Card className="mx-auto w-full overflow-hidden transition-all duration-300 hover:shadow-lg">
       {/* Header */}
       <div className="flex items-center gap-6 md:gap-8 p-6 md:p-8 border-b border-gray-100">
         <div className="flex-shrink-0">
@@ -69,7 +69,7 @@ const ExperienceDetails = ({
       </div>
 
       {/* Content - Always visible */}
-      <div className="px-6 pb-6 md:px-8 md:pb-8 flex-1 flex flex-col justify-center">
+      <div className="px-6 pb-6 md:px-8 md:pb-8">
         <div className="pt-4">
           <ul className="flex list-disc flex-col gap-2 pl-4">
             {summary?.map((sentence, index) => (
