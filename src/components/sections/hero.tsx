@@ -42,6 +42,7 @@ const HeroSection = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   return (
     <Container id='hero'>
       <div className='flex flex-col gap-12 md:flex-row'>
@@ -75,7 +76,6 @@ const HeroSection = () => {
                 <Typography className='text-white dark:text-gray-900 font-medium'>
                   Software Engineer at
                 </Typography>
-                <div className='rounded-md bg-gray-700 px-3 py-1 dark:bg-gray-200 transition-all duration-300 hover:scale-110 hover:bg-blue-600 dark:hover:bg-blue-500 cursor-pointer'>
                 <div className='rounded-md bg-gray-700 px-3 py-1 dark:bg-gray-200 transition-all duration-300 hover:scale-110 hover:bg-black dark:hover:bg-gray-800 cursor-pointer'>
                   <Typography className='text-white dark:text-gray-900 text-sm font-medium'>
                     Eknoor Trans ↗
