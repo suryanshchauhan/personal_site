@@ -36,30 +36,52 @@ const HeroSection = () => {
             Check out my projects, and feel free to connect—I&apos;m excited to explore new opportunities and collaborate on impactful tech ventures! 🚀
             </Typography>
           </div>
-          <div className='flex flex-col gap-2'>
-            <div className='flex items-center gap-2 rounded-lg bg-emerald-50 px-3 py-2 dark:bg-emerald-900/20'>
-              <div className='flex h-6 w-6 items-center justify-center'>
-                <span className='relative flex h-3 w-3'>
-                  <span className='absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75'></span>
-                  <span className='relative inline-flex h-3 w-3 rounded-full bg-emerald-500'></span>
-                </span>
+          <div className='flex flex-col gap-4'>
+            {/* Currently Status Card */}
+            <div className='rounded-xl bg-gray-900 p-6 text-white dark:bg-gray-800'>
+              <Typography variant='h3' className='text-white mb-4'>
+                Currently
+              </Typography>
+              <div className='flex items-center gap-3 mb-4'>
+                <Typography className='text-white font-medium'>
+                  Full Stack Engineer at
+                </Typography>
+                <div className='rounded-md bg-gray-700 px-3 py-1 dark:bg-gray-600'>
+                  <Typography className='text-white text-sm font-medium'>
+                    Levangie Laboratories ↗
+                  </Typography>
+                </div>
               </div>
-              <Typography className='font-semibold text-emerald-700 dark:text-emerald-300'>
-                <a 
-                  href='https://cal.com/suryanshchauhan' 
-                  target='_blank' 
-                  rel='noopener noreferrer'
-                  className='hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors duration-200'
-                >
-                  Schedule a Meeting
-                </a>
+              <Typography className='text-gray-300 text-sm leading-relaxed'>
+                Making pretty software ✨ using cutting-edge fullstack and front-end technologies for agentic AI platforms.
               </Typography>
             </div>
 
-            <div className='mt-4'>
-              <div className='flex gap-2'>
-              <MapPin className='stroke-gray-600' />
-              <Typography>Indianapolis, IN</Typography>
+            {/* Location Card */}
+            <div className='rounded-xl bg-gray-900 p-6 text-white dark:bg-gray-800'>
+              <div className='flex items-center justify-between'>
+                <div className='flex items-center gap-3'>
+                  <div className='text-2xl'>📍</div>
+                  <div>
+                    <Typography className='text-gray-400 text-sm'>
+                      🇺🇸 United States of America
+                    </Typography>
+                    <Typography variant='h3' className='text-white'>
+                      east coast
+                    </Typography>
+                  </div>
+                </div>
+                <div className='text-right'>
+                  <Typography className='text-gray-400 text-sm'>
+                    {new Date().toLocaleTimeString('en-US', {
+                      hour: '2-digit',
+                      minute: '2-digit',
+                      second: '2-digit',
+                      timeZone: 'America/New_York',
+                      timeZoneName: 'short'
+                    })}
+                  </Typography>
+                </div>
               </div>
             </div>
           </div>
