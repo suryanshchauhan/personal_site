@@ -69,13 +69,15 @@ const HeroSection = () => {
           <div className='flex flex-col gap-4'>
             {/* Currently Status Card */}
             <div className='rounded-xl bg-gray-100 p-3 sm:p-4 md:p-6 lg:p-8 dark:bg-gray-100'>
-              <Typography variant='h3' className='text-gray-900 dark:text-gray-900 mb-4'>
-                Currently
-              </Typography>
-              <div className='flex flex-col gap-3 mb-4'>
+              <div className='flex items-center gap-2 sm:gap-3 flex-wrap'>
                 <Typography className='text-gray-900 dark:text-gray-900 font-medium text-sm sm:text-base'>
                   Software Engineer at
                 </Typography>
+                <div className='rounded-md bg-gray-200 px-2 py-1 sm:px-3 sm:py-1.5 dark:bg-gray-200 transition-all duration-300 hover:scale-110 hover:bg-gray-300 dark:hover:bg-gray-800 cursor-pointer'>
+                  <Typography className='text-gray-900 dark:text-gray-900 text-xs sm:text-sm font-medium hover:text-white dark:hover:text-black'>
+                    Eknoor Trans ↗
+                  </Typography>
+                </div>
                 <div className='rounded-md bg-gray-200 px-2 py-1 sm:px-3 sm:py-1.5 dark:bg-gray-200 transition-all duration-300 hover:scale-110 hover:bg-gray-300 dark:hover:bg-gray-800 cursor-pointer self-start'>
                   <Typography className='text-gray-900 dark:text-gray-900 text-xs sm:text-sm font-medium hover:text-white dark:hover:text-black'>
                     Eknoor Trans ↗
