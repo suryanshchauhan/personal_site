@@ -26,12 +26,12 @@ const ExperienceSection = () => {
       </div>
 
       {/* Company logos row */}
-      <div className='flex flex-wrap items-center justify-center gap-6 md:gap-8 py-8'>
+      <div className='flex flex-col items-center justify-center gap-4 py-8 max-w-xs mx-auto'>
         {EXPERIENCES?.map((experience, index) => (
           <button
             key={index}
             onClick={() => setSelectedExperience(index)}
-            className={`flex items-center justify-center p-4 rounded-xl transition-all duration-200 hover:bg-white hover:shadow-md ${
+            className={`flex items-center justify-center p-4 rounded-xl transition-all duration-200 hover:bg-white hover:shadow-md w-full h-20 ${
               selectedExperience === index 
                 ? 'bg-white shadow-lg ring-2 ring-gray-900/10' 
                 : 'bg-gray-100 hover:bg-white'
@@ -41,7 +41,7 @@ const ExperienceSection = () => {
               src={experience.logo}
               srcForDarkMode={experience.darkModeLogo}
               alt={experience.logoAlt}
-              className='max-w-[80px] md:max-w-[100px] transition-transform duration-200 hover:scale-105'
+              className='max-w-[100px] max-h-[50px] object-contain transition-transform duration-200 hover:scale-105'
             />
           </button>
         ))}
