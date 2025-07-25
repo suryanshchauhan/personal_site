@@ -111,6 +111,11 @@ const HeroSection = () => {
                     {currentTime}
                   </Typography>
                 </div>
+                <div className='text-right'>
+                  <Typography className='text-white dark:text-gray-900 text-lg font-black tracking-wide'>
+                    {currentTime}
+                  </Typography>
+                </div>
               </div>
             </div>
           </div>
