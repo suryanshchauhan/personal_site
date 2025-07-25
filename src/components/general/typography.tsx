@@ -13,6 +13,7 @@ const translations: { [key: string]: string } = {
   "Currently": "Derzeit",
   "Software Engineer at": "Software-Ingenieur bei",
   "Making pretty software ✨ using cutting-edge fullstack and front-end technologies for agentic AI platforms.": "Erstelle schöne Software ✨ mit modernsten Fullstack- und Frontend-Technologien für agentische KI-Plattformen.",
+  "Developing web tools that keep trucks rolling, glitches rare, and the ops team smiling.": "Entwickle Web-Tools, die LKWs am Laufen halten, Fehler selten machen und das Ops-Team zum Lächeln bringen.",
   "United States of America": "Vereinigte Staaten von Amerika",
   "indianapolis": "indianapolis",
   
