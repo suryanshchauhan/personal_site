@@ -1,5 +1,5 @@
 <h1 align="center">
-  suryansh.wiki
+  suryansh.live
 </h1>
 <p align="center">
   My portfolio website built with <a href="https://nextjs.org" target="_blank">Next.js</a>, <a href="https://tailwindcss.com" target="_blank">Tailwind CSS</a>, <a href="https://www.radix-ui.com" target="_blank">Radix UI</a> and deployed on <a href="https://www.vercel.com/" target="_blank">Vercel</a>.⚡
