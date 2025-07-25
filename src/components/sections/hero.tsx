@@ -78,11 +78,6 @@ const HeroSection = () => {
                     Eknoor Trans ↗
                   </Typography>
                 </div>
-                <div className='rounded-md bg-gray-200 px-2 py-1 sm:px-3 sm:py-1.5 dark:bg-gray-200 transition-all duration-300 hover:scale-110 hover:bg-gray-300 dark:hover:bg-gray-800 cursor-pointer self-start'>
-                  <Typography className='text-gray-900 dark:text-gray-900 text-xs sm:text-sm font-medium hover:text-white dark:hover:text-black'>
-                    Eknoor Trans ↗
-                  </Typography>
-                </div>
               </div>
               <Typography className='text-gray-600 dark:text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed'>
                 Developing web tools that keep trucks rolling, glitches rare, and the ops team smiling.
