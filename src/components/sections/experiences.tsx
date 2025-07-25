@@ -1,10 +1,16 @@
+'use client';
+
+import { useState } from 'react';
 import { EXPERIENCES } from '@/lib/data';
 import ExperienceDetails from '@/components/data-display/experience-details';
 import Tag from '@/components/data-display/tag';
 import Typography from '@/components/general/typography';
 import Container from '@/components/layout/container';
+import ImageWrapper from '@/components/data-display/image-wrapper';
 
 const ExperienceSection = () => {
+  const [selectedExperience, setSelectedExperience] = useState(0);
+
   return (
     <Container id='experience' className='bg-gray-50'>
       <div className='flex flex-col items-center gap-4'>
@@ -19,13 +25,34 @@ const ExperienceSection = () => {
         </Typography>
       </div>
 
-      <div className='grid gap-6 md:gap-8'>
+      {/* Company logos row */}
+      <div className='flex flex-wrap items-center justify-center gap-6 md:gap-8 py-8'>
         {EXPERIENCES?.map((experience, index) => (
-          <ExperienceDetails
-            {...experience}
+          <button
             key={index}
-          />
+            onClick={() => setSelectedExperience(index)}
+            className={`flex items-center justify-center p-4 rounded-xl transition-all duration-200 hover:bg-white hover:shadow-md ${
+              selectedExperience === index 
+                ? 'bg-white shadow-lg ring-2 ring-gray-900/10' 
+                : 'bg-gray-100 hover:bg-white'
+            }`}
+          >
+            <ImageWrapper
+              src={experience.logo}
+              srcForDarkMode={experience.darkModeLogo}
+              alt={experience.logoAlt}
+              className='max-w-[80px] md:max-w-[100px] transition-transform duration-200 hover:scale-105'
+            />
+          </button>
         ))}
+      </div>
+
+      {/* Selected experience details */}
+      <div className='max-w-4xl mx-auto'>
+        <ExperienceDetails
+          {...EXPERIENCES[selectedExperience]}
+          key={selectedExperience}
+        />
       </div>
     </Container>
   );
