@@ -1,14 +1,12 @@
 'use client';
 
 import { useEffect, useState, createContext, useContext } from 'react';
-import { Menu, X, Languages } from 'lucide-react';
+import { Languages } from 'lucide-react';
 
 import { mergeClasses } from '@/lib/utils';
-import useWindowSize from '@/hooks/use-window-size';
 import useScroll from '@/hooks/use-scroll';
 import Link from '@/components/navigation/link';
 import ThemeSwitcher from '@/components/general/theme-switcher';
-import IconButton from '@/components/general/icon-button';
 import Typography from '@/components/general/typography';
 import Button from '@/components/general/button';
 
@@ -35,7 +33,6 @@ const Logo = () => (
 const Header = () => {
   const scrolled = useScroll(40);
   const [isGerman, setIsGerman] = useState(false);
-  const size = useWindowSize();
 
   const toggleLanguage = () => {
     setIsGerman(!isGerman);
