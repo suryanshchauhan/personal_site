@@ -71,6 +71,26 @@ const ContactSection = () => {
           </div>
         </div>
         <div className='flex flex-col items-center gap-2'>
+          <div className='flex items-center gap-2 rounded-lg bg-emerald-50 px-3 py-2 dark:bg-emerald-900/20'>
+            <div className='flex h-6 w-6 items-center justify-center'>
+              <span className='relative flex h-3 w-3'>
+                <span className='absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75'></span>
+                <span className='relative inline-flex h-3 w-3 rounded-full bg-emerald-500'></span>
+              </span>
+            </div>
+            <Typography className='font-semibold text-emerald-700 dark:text-emerald-300'>
+              <a 
+                href='https://cal.com/suryanshchauhan' 
+                target='_blank' 
+                rel='noopener noreferrer'
+                className='hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors duration-200'
+              >
+                Schedule a Meeting
+              </a>
+            </Typography>
+          </div>
+        </div>
+        <div className='flex flex-col items-center gap-2'>
           <Typography className='text-center'>You may also find me on these platforms!</Typography>
           <SocialIcons />
         </div>
