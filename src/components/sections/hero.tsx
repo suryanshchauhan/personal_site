@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { MapPin } from 'lucide-react';
 
@@ -7,6 +8,30 @@ import Typography from '@/components/general/typography';
 import Container from '@/components/layout/container';
 
 const HeroSection = () => {
+  const [currentTime, setCurrentTime] = useState('');
+
+  useEffect(() => {
+    const updateTime = () => {
+      const time = new Date().toLocaleTimeString('en-US', {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        timeZone: 'America/Indiana/Indianapolis',
+        timeZoneName: 'short'
+      });
+      setCurrentTime(time);
+    };
+
+    // Update immediately
+    updateTime();
+
+    // Update every second
+    const interval = setInterval(updateTime, 1000);
+
+    // Cleanup interval on unmount
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <Container id='hero'>
       <div className='flex flex-col gap-12 md:flex-row'>
@@ -73,13 +98,7 @@ const HeroSection = () => {
                 </div>
                 <div className='text-right'>
                   <Typography className='text-gray-400 dark:text-gray-600 text-sm'>
-                    {new Date().toLocaleTimeString('en-US', {
-                      hour: '2-digit',
-                      minute: '2-digit',
-                      second: '2-digit',
-                      timeZone: 'America/Indiana/Indianapolis',
-                      timeZoneName: 'short'
-                    })}
+                    {currentTime}
                   </Typography>
                 </div>
               </div>
