@@ -38,46 +38,46 @@ const HeroSection = () => {
           </div>
           <div className='flex flex-col gap-4'>
             {/* Currently Status Card */}
-            <div className='rounded-xl bg-gray-900 p-6 text-white dark:bg-gray-800'>
-              <Typography variant='h3' className='text-white mb-4'>
+            <div className='rounded-xl bg-gray-900 p-6 text-white dark:bg-gray-100'>
+              <Typography variant='h3' className='text-white dark:text-gray-900 mb-4'>
                 Currently
               </Typography>
               <div className='flex items-center gap-3 mb-4'>
-                <Typography className='text-white font-medium'>
+                <Typography className='text-white dark:text-gray-900 font-medium'>
                   Full Stack Engineer at
                 </Typography>
-                <div className='rounded-md bg-gray-700 px-3 py-1 dark:bg-gray-600'>
-                  <Typography className='text-white text-sm font-medium'>
+                <div className='rounded-md bg-gray-700 px-3 py-1 dark:bg-gray-200'>
+                  <Typography className='text-white dark:text-gray-900 text-sm font-medium'>
                     Levangie Laboratories ↗
                   </Typography>
                 </div>
               </div>
-              <Typography className='text-gray-300 text-sm leading-relaxed'>
+              <Typography className='text-gray-300 dark:text-gray-600 text-sm leading-relaxed'>
                 Making pretty software ✨ using cutting-edge fullstack and front-end technologies for agentic AI platforms.
               </Typography>
             </div>
 
             {/* Location Card */}
-            <div className='rounded-xl bg-gray-900 p-6 text-white dark:bg-gray-800'>
+            <div className='rounded-xl bg-gray-900 p-6 text-white dark:bg-gray-100'>
               <div className='flex items-center justify-between'>
                 <div className='flex items-center gap-3'>
                   <div className='text-2xl'>📍</div>
                   <div>
-                    <Typography className='text-gray-400 text-sm'>
+                    <Typography className='text-gray-400 dark:text-gray-600 text-sm'>
                       🇺🇸 United States of America
                     </Typography>
-                    <Typography variant='h3' className='text-white'>
-                      east coast
+                    <Typography variant='h3' className='text-white dark:text-gray-900'>
+                      indianapolis
                     </Typography>
                   </div>
                 </div>
                 <div className='text-right'>
-                  <Typography className='text-gray-400 text-sm'>
+                  <Typography className='text-gray-400 dark:text-gray-600 text-sm'>
                     {new Date().toLocaleTimeString('en-US', {
                       hour: '2-digit',
                       minute: '2-digit',
                       second: '2-digit',
-                      timeZone: 'America/New_York',
+                      timeZone: 'America/Indiana/Indianapolis',
                       timeZoneName: 'short'
                     })}
                   </Typography>
