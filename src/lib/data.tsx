@@ -46,6 +46,12 @@ import LogoJest from '/public/images/logos/icon-jest.svg';
 
 import { ExperienceDetails, ProjectDetails, TechDetails, TestimonialDetails } from '@/lib/types';
 
+// Translation dictionary
+const translations: { [key: string]: string } = {
+  // Hero Section
+  "Hi, I'm Suryansh": "Hallo, ich bin Suryansh",
+  "Hi, I'm Suryansh ": "Hallo, ich bin Suryansh ",
+  "Currently": "Derzeit",
 
 export const SOCIAL_LINKS = [
   {
