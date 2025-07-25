@@ -74,3 +74,6 @@ const HeroSection = () => {
               <div className='flex items-center gap-3 mb-4'>
                 <Typography className='text-white dark:text-gray-900 font-medium'>
                   Software Engineer at
+
+  )
+}
