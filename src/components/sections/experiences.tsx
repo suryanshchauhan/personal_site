@@ -36,7 +36,7 @@ const ExperienceSection = () => {
               className={`flex items-center justify-center p-4 rounded-xl transition-all duration-200 hover:bg-white hover:shadow-md w-20 h-20 lg:w-full lg:h-20 ${
                 selectedExperience === index 
                   ? 'bg-white shadow-lg ring-2 ring-gray-900/10' 
-                  : 'bg-gray-100 hover:bg-white dark:bg-gray-200 dark:hover:bg-gray-50'
+                  : 'bg-gray-100 hover:bg-white'
               }`}
             >
               <ImageWrapper
