@@ -7,6 +7,7 @@ import './globals.css';
 import Header from '@/components/layout/header';
 import { Providers } from '@/lib/providers';
 import Footer from '@/components/layout/footer';
+import { TranslationProvider } from '@/components/layout/header';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -43,13 +44,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <body className={`${inter.className} bg-gray text-gray-600 antialiased`}>
         <Providers>
-          <Header />
-          <main className='flex min-h-screen w-full flex-col'>
-            {children}
-            <Analytics />
-            <SpeedInsights />
-          </main>
-          <Footer />
+          <TranslationProvider>
+            <Header />
+            <main className='flex min-h-screen w-full flex-col'>
+              {children}
+              <Analytics />
+              <SpeedInsights />
+            </main>
+            <Footer />
+          </TranslationProvider>
         </Providers>
       </body>
     </html>

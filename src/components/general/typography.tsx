@@ -2,6 +2,52 @@ import * as React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 
 import { mergeClasses } from '@/lib/utils';
+import { useTranslation } from '@/components/layout/header';
+
+// Translation dictionary
+const translations: { [key: string]: string } = {
+  // Hero Section
+  "Hi, I'm Suryansh": "Hallo, ich bin Suryansh",
+  "Currently": "Derzeit",
+  "Software Engineer at": "Software-Ingenieur bei",
+  "Making pretty software ✨ using cutting-edge fullstack and front-end technologies for agentic AI platforms.": "Erstelle schöne Software ✨ mit modernsten Fullstack- und Frontend-Technologien für agentische KI-Plattformen.",
+  "United States of America": "Vereinigte Staaten von Amerika",
+  "indianapolis": "indianapolis",
+  
+  // Skills Section
+  "Skills": "Fähigkeiten",
+  "The skills, tools and technologies I am really good at:": "Die Fähigkeiten, Tools und Technologien, in denen ich wirklich gut bin:",
+  
+  // Experience Section
+  "Experience": "Erfahrung",
+  "Here are the places where I've worked:": "Hier sind die Orte, an denen ich gearbeitet habe:",
+  "Current": "Aktuell",
+  
+  // Projects Section
+  "Projects": "Projekte",
+  "Some of the noteworthy projects I have built:": "Einige der bemerkenswerten Projekte, die ich erstellt habe:",
+  
+  // Contact Section
+  "Get in touch": "Kontakt aufnehmen",
+  "I'm always on the lookout for new opportunities and my inbox is open for all. If you're considering my contribution, have a question, or just want to say hi, you can count on hearing back from me!": "Ich bin immer auf der Suche nach neuen Möglichkeiten und mein Posteingang ist für alle offen. Wenn Sie meinen Beitrag in Betracht ziehen, eine Frage haben oder einfach nur Hallo sagen möchten, können Sie darauf zählen, von mir zu hören!",
+  "You may also find me on these platforms!": "Sie können mich auch auf diesen Plattformen finden!",
+  "Copied!": "Kopiert!",
+  
+  // Footer
+  "suryansh.wiki": "suryansh.wiki",
+  
+  // Job Positions
+  "QA Business Analyst Intern": "QA Business Analyst Praktikant",
+  "UI/UX Intern": "UI/UX Praktikant",
+  "Data Science Intern": "Data Science Praktikant",
+  "STEM Liaison": "STEM-Verbindungsbeauftragte",
+  "Software Engineer Intern": "Software-Ingenieur Praktikant",
+};
+
+const translateText = (text: string, isGerman: boolean): string => {
+  if (!isGerman) return text;
+  return translations[text] || text;
+};
 
 const typographyVariants = cva('text-gray-600 text-normal', {
   variants: {
@@ -27,6 +73,7 @@ interface TypographyProps
     >,
     VariantProps<typeof typographyVariants> {
   component?: React.ElementType;
+  noTranslate?: boolean;
 }
 
 let elementMapping = {
@@ -46,20 +93,30 @@ const Typography = React.forwardRef<
   TypographyProps
 >(
   (
-    { component, className = '', variant, children, ...props }: TypographyProps,
+    { component, className = '', variant, children, noTranslate = false, ...props }: TypographyProps,
     ref
   ) => {
+    const { isGerman } = useTranslation();
     const Comp = (
       component ? component : variant ? elementMapping[variant] : 'p'
     ) as ComponentElement;
 
+    const translatedChildren = React.useMemo(() => {
+      if (noTranslate || !children) return children;
+      
+      if (typeof children === 'string') {
+        return translateText(children, isGerman);
+      }
+      
+      return children;
+    }, [children, isGerman, noTranslate]);
     return (
       <Comp
         className={mergeClasses(typographyVariants({ variant }), className)}
         ref={ref}
         {...props}
       >
-        {children}
+        {translatedChildren}
       </Comp>
     );
   }

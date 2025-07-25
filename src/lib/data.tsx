@@ -46,24 +46,6 @@ import LogoJest from '/public/images/logos/icon-jest.svg';
 
 import { ExperienceDetails, ProjectDetails, TechDetails, TestimonialDetails } from '@/lib/types';
 
-export const NAV_LINKS = [
-  {
-    label: 'Skills',
-    href: '#skills',
-  },
-  {
-    label: 'Experience',
-    href: '#experience',
-  },
-  {
-    label: 'Projects',
-    href: '#projects',
-  },
-  {
-    label: 'Contact',
-    href: '#contact',
-  },
-];
 
 export const SOCIAL_LINKS = [
   {
