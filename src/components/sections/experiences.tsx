@@ -25,34 +25,37 @@ const ExperienceSection = () => {
         </Typography>
       </div>
 
-      {/* Company logos row */}
-      <div className='flex flex-col items-center justify-center gap-4 py-8 max-w-xs mx-auto'>
-        {EXPERIENCES?.map((experience, index) => (
-          <button
-            key={index}
-            onClick={() => setSelectedExperience(index)}
-            className={`flex items-center justify-center p-4 rounded-xl transition-all duration-200 hover:bg-white hover:shadow-md w-full h-20 ${
-              selectedExperience === index 
-                ? 'bg-white shadow-lg ring-2 ring-gray-900/10' 
-                : 'bg-gray-100 hover:bg-white'
-            }`}
-          >
-            <ImageWrapper
-              src={experience.logo}
-              srcForDarkMode={experience.darkModeLogo}
-              alt={experience.logoAlt}
-              className='max-w-[100px] max-h-[50px] object-contain transition-transform duration-200 hover:scale-105'
-            />
-          </button>
-        ))}
-      </div>
-
-      {/* Selected experience details */}
-      <div className='max-w-4xl mx-auto'>
-        <ExperienceDetails
-          {...EXPERIENCES[selectedExperience]}
-          key={selectedExperience}
-        />
+      {/* Experience layout with logos on the right */}
+      <div className='flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto'>
+        {/* Selected experience details */}
+        <div className='flex-1'>
+          <ExperienceDetails
+            {...EXPERIENCES[selectedExperience]}
+            key={selectedExperience}
+          />
+        </div>
+        
+        {/* Company logos column */}
+        <div className='flex flex-row lg:flex-col items-center justify-center gap-4 lg:max-w-xs'>
+          {EXPERIENCES?.map((experience, index) => (
+            <button
+              key={index}
+              onClick={() => setSelectedExperience(index)}
+              className={`flex items-center justify-center p-4 rounded-xl transition-all duration-200 hover:bg-white hover:shadow-md w-20 h-20 lg:w-full lg:h-20 ${
+                selectedExperience === index 
+                  ? 'bg-white shadow-lg ring-2 ring-gray-900/10' 
+                  : 'bg-gray-100 hover:bg-white'
+              }`}
+            >
+              <ImageWrapper
+                src={experience.logo}
+                srcForDarkMode={experience.darkModeLogo}
+                alt={experience.logoAlt}
+                className='max-w-[60px] max-h-[40px] lg:max-w-[100px] lg:max-h-[50px] object-contain transition-transform duration-200 hover:scale-105'
+              />
+            </button>
+          ))}
+        </div>
       </div>
     </Container>
   );
