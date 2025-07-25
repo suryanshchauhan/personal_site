@@ -98,7 +98,7 @@ const HeroSection = () => {
                     }}
                   />
                   <div className='ml-2'>
-                    <Typography className='text-gray-400 dark:text-gray-600 text-sm'>
+                    <Typography className='text-gray-300 dark:text-gray-700 text-sm'>
                       🇺🇸 United States of America
                     </Typography>
                     <Typography variant='h3' className='text-white dark:text-gray-900'>
@@ -107,7 +107,7 @@ const HeroSection = () => {
                   </div>
                 </div>
                 <div className='text-right'>
-                  <Typography className='text-gray-400 dark:text-gray-600 text-sm'>
+                  <Typography className='text-gray-300 dark:text-gray-700 text-sm'>
                     {currentTime}
                   </Typography>
                 </div>
