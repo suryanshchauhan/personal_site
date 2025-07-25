@@ -94,7 +94,7 @@ const HeroSection = () => {
                     className='w-8 h-8 text-gray-400 transition-transform duration-300 ease-out' 
                     style={{ transform: `rotate(${scrollY * 0.5}deg)` }}
                   />
-                  <div>
+                  <div className='ml-2'>
                     <Typography className='text-gray-400 dark:text-gray-600 text-sm'>
                       🇺🇸 United States of America
                     </Typography>
