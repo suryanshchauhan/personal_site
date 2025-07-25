@@ -68,7 +68,7 @@ const HeroSection = () => {
           </div>
           <div className='flex flex-col gap-4'>
             {/* Currently Status Card */}
-            <div className='rounded-xl bg-gray-900 p-6 text-white dark:bg-gray-100'>
+            <div className='rounded-xl bg-gray-100 p-6 dark:bg-gray-100'>
               <Typography variant='h3' className='text-white dark:text-gray-900 mb-4'>
                 Currently
               </Typography>
@@ -76,7 +76,7 @@ const HeroSection = () => {
                 <Typography className='text-white dark:text-gray-900 font-medium'>
                   Software Engineer at
                 </Typography>
-                <div className='rounded-md bg-gray-700 px-3 py-1 dark:bg-gray-200 transition-all duration-300 hover:scale-110 hover:bg-black dark:hover:bg-gray-800 cursor-pointer'>
+                <div className='rounded-md bg-gray-200 px-3 py-1 dark:bg-gray-200 transition-all duration-300 hover:scale-110 hover:bg-gray-300 dark:hover:bg-gray-800 cursor-pointer'>
                   <Typography className='text-white dark:text-gray-900 text-sm font-medium hover:text-white dark:hover:text-black'>
                     Eknoor Trans ↗
                   </Typography>
@@ -88,7 +88,7 @@ const HeroSection = () => {
             </div>
 
             {/* Location Card */}
-            <div className='rounded-xl bg-gray-900 p-6 text-white dark:bg-gray-100'>
+            <div className='rounded-xl bg-gray-100 p-6 dark:bg-gray-100'>
               <div className='flex items-center justify-between'>
                 <div className='flex items-center gap-3'>
                   <Navigation 
