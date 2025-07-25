@@ -2,15 +2,18 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { MapPin } from 'lucide-react';
+import { Navigation } from 'lucide-react';
 
 import SuryanshPhoto from '/public/images/suryansh-photo.jpg';
 import SocialIcons from '@/components/data-display/social-icons';
 import Typography from '@/components/general/typography';
 import Container from '@/components/layout/container';
+import useScroll from '@/hooks/use-scroll';
 
 const HeroSection = () => {
   const [currentTime, setCurrentTime] = useState('');
+  const scrolled = useScroll(0);
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     const updateTime = () => {
@@ -34,6 +37,11 @@ const HeroSection = () => {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
     <Container id='hero'>
       <div className='flex flex-col gap-12 md:flex-row'>
@@ -88,13 +96,16 @@ const HeroSection = () => {
             <div className='rounded-xl bg-gray-900 p-6 text-white dark:bg-gray-100'>
               <div className='flex items-center justify-between'>
                 <div className='flex items-center gap-3'>
-                  <div className='text-2xl'>📍</div>
+                  <Navigation 
+                    className='w-8 h-8 text-gray-400 transition-transform duration-300 ease-out' 
+                    style={{ transform: `rotate(${scrollY * 0.5}deg)` }}
+                  />
                   <div>
                     <Typography className='text-gray-400 dark:text-gray-600 text-sm'>
                       🇺🇸 United States of America
                     </Typography>
                     <Typography variant='h3' className='text-white dark:text-gray-900'>
-                      indianapolis
+                      east coast
                     </Typography>
                   </div>
                 </div>
