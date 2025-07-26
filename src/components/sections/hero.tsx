@@ -91,7 +91,7 @@ const HeroSection = () => {
                 </div>
               </div>
               <Typography className='text-gray-600 dark:text-gray-600 text-xs sm:text-sm leading-relaxed'>
-                Developing web tools that keep trucks rolling, glitches rare, and the team smiling.
+                Developing web tools that keep trucks rolling, glitches rare, and the team always smiling.
               </Typography>
             </div>
 
