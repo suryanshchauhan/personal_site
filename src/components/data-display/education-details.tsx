@@ -21,8 +21,6 @@ const EducationDetails = ({
   startDate,
   endDate,
   location,
-  gpa,
-  achievements,
 }: EducationDetailsProps) => {
 
   // Map school names to URLs
@@ -81,29 +79,7 @@ const EducationDetails = ({
             <Typography variant="body2" className="text-gray-600">
               📍 {location}
             </Typography>
-            {gpa && (
-              <Typography variant="body2" className="text-gray-600 font-medium">
-                GPA: {gpa}
-              </Typography>
-            )}
           </div>
-
-          {achievements && achievements.length > 0 && (
-            <div className="flex flex-col gap-2 mt-2">
-              <Typography variant="body2" className="font-medium text-gray-700">
-                Achievements:
-              </Typography>
-              <ul className="list-disc list-inside space-y-1">
-                {achievements.map((achievement, index) => (
-                  <li key={index}>
-                    <Typography variant="body3" className="text-gray-600">
-                      {achievement}
-                    </Typography>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
         </div>
       </div>
     </Card>

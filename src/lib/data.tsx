@@ -373,15 +373,9 @@ export const EDUCATION: EducationDetails[] = [
     darkModeLogo: LogoDepauwLight,
     school: 'DePauw University',
     degree: 'Bachelor of Arts',
-    field: 'Computer Science & Mathematics',
+    field: 'Computer Science',
     startDate: new Date('2020-08-01'),
     endDate: new Date('2024-05-01'),
     location: 'Greencastle, Indiana',
-    gpa: '3.7/4.0',
-    achievements: [
-      'Dean\'s List (Multiple Semesters)',
-      'Computer Science Honor Society',
-      'Mathematics Honor Society',
-    ],
   },
 ];
