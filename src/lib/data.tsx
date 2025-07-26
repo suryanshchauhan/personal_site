@@ -374,8 +374,8 @@ export const EDUCATION: EducationDetails[] = [
     school: 'DePauw University',
     degree: 'Bachelor of Arts',
     field: 'Computer Science',
-    startDate: new Date('2020-08-01'),
-    endDate: new Date('2024-05-01'),
-    location: 'Greencastle, Indiana',
+    startDate: new Date('2019-08-01'),
+    endDate: new Date('2023-12-01'),
+    location: 'Greencastle, IN, United States of America',
   },
 ];
