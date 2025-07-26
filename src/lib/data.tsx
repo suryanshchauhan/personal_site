@@ -376,6 +376,6 @@ export const EDUCATION: EducationDetails[] = [
     field: 'Computer Science',
     startDate: new Date('2019-08-01'),
     endDate: new Date('2023-12-01'),
-    location: 'IN, United States of America',
+    location: 'IN, United States',
   },
 ];
