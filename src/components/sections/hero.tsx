@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { Navigation } from 'lucide-react';
+import { Navigation, Globe } from 'lucide-react';
 
 import SuryanshPhoto from '/public/images/suryansh-photo.jpg';
 import SocialIcons from '@/components/data-display/social-icons';
@@ -14,6 +14,7 @@ const HeroSection = () => {
   const [currentTime, setCurrentTime] = useState('');
   const scrolled = useScroll(0);
   const [scrollY, setScrollY] = useState(0);
+  const [isDayTime, setIsDayTime] = useState(true);
 
   useEffect(() => {
     const updateTime = () => {
@@ -25,6 +26,12 @@ const HeroSection = () => {
         timeZoneName: 'short'
       });
       setCurrentTime(time);
+      
+      // Check if it's day time (6 AM to 6 PM)
+      const now = new Date();
+      const indianapolisTime = new Date(now.toLocaleString("en-US", {timeZone: "America/Indiana/Indianapolis"}));
+      const hour = indianapolisTime.getHours();
+      setIsDayTime(hour >= 6 && hour < 18);
     };
 
     // Update immediately
@@ -117,6 +124,26 @@ const HeroSection = () => {
                     <Typography className='text-gray-900 dark:text-gray-900 text-base font-semibold'>
                       {currentTime}
                     </Typography>
+                  </div>
+                </div>
+                {/* Day/Night Globe - Desktop Only */}
+                <div className='hidden lg:flex items-center'>
+                  <div className='relative'>
+                    <Globe 
+                      className={`w-12 h-12 transition-all duration-500 ${
+                        isDayTime 
+                          ? 'text-yellow-500 drop-shadow-lg' 
+                          : 'text-blue-400 drop-shadow-lg'
+                      }`}
+                      style={{
+                        filter: isDayTime 
+                          ? 'drop-shadow(0 0 12px rgba(234, 179, 8, 0.4))' 
+                          : 'drop-shadow(0 0 12px rgba(96, 165, 250, 0.4))'
+                      }}
+                    />
+                    <div className={`absolute inset-0 rounded-full ${
+                      isDayTime ? 'bg-yellow-200' : 'bg-blue-900'
+                    } opacity-20 animate-pulse`}></div>
                   </div>
                 </div>
               </div>
