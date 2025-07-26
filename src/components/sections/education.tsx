@@ -15,7 +15,7 @@ const EducationSection = () => {
           variant='subtitle'
           className='max-w-xl text-center'
         >
-          My academic background and achievements:
+          My educational foundation:
         </Typography>
       </div>
 

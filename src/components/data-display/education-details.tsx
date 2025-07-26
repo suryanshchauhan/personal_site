@@ -66,18 +66,18 @@ const EducationDetails = ({
             <Typography variant="h3" className="font-semibold text-gray-900">
               {school}
             </Typography>
+            <Typography variant="body2" className="text-gray-600">
+              📍 {location}
+            </Typography>
             <Typography variant="subtitle" className="text-gray-700">
               {degree} in {field}
             </Typography>
           </div>
           
-          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+          <div className="flex flex-col gap-2">
             <Typography variant="body2" className="text-gray-600">
               {new Intl.DateTimeFormat('en-US', dateFormatOptions).format(startDate)} -{' '}
               {new Intl.DateTimeFormat('en-US', dateFormatOptions).format(endDate)}
-            </Typography>
-            <Typography variant="body2" className="text-gray-600">
-              📍 {location}
             </Typography>
           </div>
         </div>
