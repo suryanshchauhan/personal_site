@@ -121,8 +121,15 @@ const Typography = React.forwardRef<
       return children;
     }, [children, isGerman, noTranslate]);
     return (
+    // Add German-specific sizing for h1 variant
+    const germanSizing = isGerman && variant === 'h1' ? 'md:text-4xl lg:text-5xl' : '';
+    const finalClassName = mergeClasses(
+      typographyVariants({ variant }), 
+      germanSizing,
+      className
+    );
       <Comp
-        className={mergeClasses(typographyVariants({ variant }), className)}
+        className={finalClassName}
         ref={ref}
         {...props}
       >
