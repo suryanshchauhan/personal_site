@@ -34,16 +34,15 @@ const EducationDetails = ({
   const schoolUrl = getSchoolUrl(logoAlt);
 
   return (
-    <Card>
-    <div className='rounded-xl bg-gray-100 p-4 md:p-6 dark:bg-gray-100'>
-      <div className="flex flex-col gap-4">
-        <div className="flex justify-center">
+    <Card className="mx-auto w-full overflow-hidden transition-all duration-300 hover:shadow-lg">
+      <div className="flex flex-col md:flex-row gap-6 p-6 md:p-8">
+        <div className="flex-shrink-0 flex justify-center md:justify-start">
           {schoolUrl ? (
             <Link
               href={schoolUrl}
               externalLink
               noCustomization
-              className="block transition-transform duration-200 hover:scale-105"
+              className="block transition-transform duration-200 hover:scale-110"
             >
               <ImageWrapper
                 src={logo}
@@ -62,27 +61,10 @@ const EducationDetails = ({
           )}
         </div>
         
-        <div className="flex flex-col gap-2 text-center">
-          <Typography className='text-gray-600 dark:text-gray-700 text-xs sm:text-sm md:text-xs lg:text-sm'>
-            {location}
-          </Typography>
-          <Typography variant='h3' className='text-gray-900 dark:text-gray-900 text-2xl md:text-3xl font-semibold'>
-            {school}
-          </Typography>
-          <Typography className='text-gray-600 dark:text-gray-600 text-sm leading-relaxed'>
-            <span>{degree}</span> in <span>{field}</span>
-          </Typography>
-          <Typography className='text-gray-600 dark:text-gray-600 text-xs sm:text-sm'>
-            {new Intl.DateTimeFormat('en-US', dateFormatOptions).format(startDate)} -{' '}
-            {new Intl.DateTimeFormat('en-US', dateFormatOptions).format(endDate)}
-          </Typography>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default EducationDetails;
+        <div className="flex flex-col gap-3 flex-grow">
+          <div className="flex flex-col gap-2">
+            <Typography variant="body2" className="text-gray-600">
+              <span>{location} 🇺🇸</span>
             </Typography>
             <Typography variant="h3" className="font-semibold text-gray-900">
               {school}
