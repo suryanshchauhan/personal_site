@@ -30,6 +30,7 @@ import LogoTechpointLight from '/public/images/logos/logo-techpoint-light.png';
 
 import LogoDepauw from '/public/images/logos/logo-depauw.png';
 import LogoDepauwLight from '/public/images/logos/logo-depauw-light.png';
+import LogoDepauwJpg from '/public/images/logos/depauw.jpg';
 import LogoHrtc from '/public/images/logos/logo-hrtc.png';
 import LogoAws from '/public/images/logos/icon-aws.svg';
 import LogoKubernetes from '/public/images/logos/icon-kubernetes.svg';
@@ -368,7 +369,7 @@ export const TESTIMONIALS: TestimonialDetails[] = [];
 
 export const EDUCATION: EducationDetails[] = [
   {
-    logo: '/images/logos/depauw.jpg',
+    logo: LogoDepauwJpg,
     logoAlt: 'DePauw University',
     darkModeLogo: LogoDepauwLight,
     school: 'DePauw University',
