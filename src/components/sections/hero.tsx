@@ -103,8 +103,8 @@ const HeroSection = () => {
 
             {/* Location Card */}
             <div className='rounded-xl bg-gray-100 p-4 md:p-6 dark:bg-gray-100'>
-              <div className='flex items-center justify-between'>
-                <div className='flex items-center gap-2 sm:gap-3 md:flex-row flex-col md:items-center items-start'>
+              <div className='flex flex-col md:flex-row md:items-center md:justify-between gap-4'>
+                <div className='flex items-start md:items-center gap-2 sm:gap-3'>
                   <Navigation 
                     className='w-8 h-8 sm:w-10 sm:h-10 text-gray-700 transition-all duration-500 ease-out drop-shadow-lg hover:text-gray-600 hover:scale-110' 
                     style={{ 
@@ -112,7 +112,7 @@ const HeroSection = () => {
                       filter: `drop-shadow(0 0 8px rgba(55, 65, 81, 0.3))`
                     }}
                   />
-                  <div className='ml-1 sm:ml-2 md:ml-2 flex flex-col md:block'>
+                  <div className='ml-1 sm:ml-2 md:ml-2 flex flex-col'>
                     <Typography className='text-gray-600 dark:text-gray-700 text-xs sm:text-sm md:mb-0 mb-1'>
                       🇺🇸 United States of America
                     </Typography>
@@ -121,12 +121,7 @@ const HeroSection = () => {
                     </Typography>
                   </div>
                 </div>
-                <div className='text-right md:block hidden'>
-                  <Typography className='text-gray-900 dark:text-gray-900 text-sm sm:text-base font-semibold'>
-                    {currentTime}
-                  </Typography>
-                </div>
-                <div className='text-left md:hidden block w-full mt-2'>
+                <div className='text-left md:text-right'>
                   <Typography className='text-gray-900 dark:text-gray-900 text-sm sm:text-base font-semibold'>
                     {currentTime}
                   </Typography>
