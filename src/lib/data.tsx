@@ -44,7 +44,7 @@ import LogoGraphql from '/public/images/logos/icon-graphql.svg';
 import LogoJenkins from '/public/images/logos/icon-jenkins.svg';
 import LogoJest from '/public/images/logos/icon-jest.svg';
 
-import { ExperienceDetails, ProjectDetails, TechDetails, TestimonialDetails } from '@/lib/types';
+import { ExperienceDetails, ProjectDetails, TechDetails, TestimonialDetails, EducationDetails } from '@/lib/types';
 
 export const SOCIAL_LINKS = [
   {
@@ -365,3 +365,23 @@ export const EXPERIENCES: ExperienceDetails[] = [
   
 ];
 export const TESTIMONIALS: TestimonialDetails[] = [];
+
+export const EDUCATION: EducationDetails[] = [
+  {
+    logo: LogoDepauw,
+    logoAlt: 'DePauw University',
+    darkModeLogo: LogoDepauwLight,
+    school: 'DePauw University',
+    degree: 'Bachelor of Arts',
+    field: 'Computer Science & Mathematics',
+    startDate: new Date('2020-08-01'),
+    endDate: new Date('2024-05-01'),
+    location: 'Greencastle, Indiana',
+    gpa: '3.7/4.0',
+    achievements: [
+      'Dean\'s List (Multiple Semesters)',
+      'Computer Science Honor Society',
+      'Mathematics Honor Society',
+    ],
+  },
+];

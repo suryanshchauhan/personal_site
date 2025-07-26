@@ -32,3 +32,17 @@ export type TestimonialDetails = {
   testimonial: string;
   title: string;
 };
+
+export type EducationDetails = {
+  logo: string | StaticImageData;
+  darkModeLogo?: string | StaticImageData;
+  logoAlt: string;
+  school: string;
+  degree: string;
+  field: string;
+  startDate: Date;
+  endDate: Date;
+  location: string;
+  gpa?: string;
+  achievements?: string[];
+};
