@@ -80,11 +80,11 @@ const HeroSection = () => {
               <Typography variant='h3' className='text-gray-900 dark:text-gray-900 mb-4'>
                 Currently
               </Typography>
-              <div className='flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-4'>
-                <Typography className='text-gray-900 dark:text-gray-900 font-medium'>
+            <div className='flex flex-row items-center gap-2 sm:gap-3 mb-4'>
+                <Typography className='text-gray-900 dark:text-gray-900 font-medium flex-shrink-0'>
                   Software Engineer at
                 </Typography>
-                <div className='rounded-md bg-gray-200 px-3 py-1 dark:bg-gray-200 transition-all duration-300 hover:scale-110 hover:bg-gray-300 dark:hover:bg-gray-800 cursor-pointer flex-shrink-0'>
+                <div className='rounded-md bg-gray-200 px-3 py-1 dark:bg-gray-200 transition-all duration-300 hover:scale-110 hover:bg-gray-300 dark:hover:bg-gray-800 cursor-pointer'>
                   <Typography className='text-gray-900 dark:text-gray-900 text-xs sm:text-sm font-medium hover:text-gray-900 dark:hover:text-black'>
                     Eknoor Trans ↗
                   </Typography>
