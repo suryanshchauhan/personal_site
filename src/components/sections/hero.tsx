@@ -146,6 +146,26 @@ const HeroSection = () => {
                     } opacity-20 animate-pulse`}></div>
                   </div>
                 </div>
+                {/* Day/Night Globe - Desktop Only */}
+                <div className='hidden lg:flex items-center'>
+                  <div className='relative'>
+                    <Globe 
+                      className={`w-12 h-12 transition-all duration-500 ${
+                        isDayTime 
+                          ? 'text-yellow-500 drop-shadow-lg' 
+                          : 'text-blue-400 drop-shadow-lg'
+                      }`}
+                      style={{
+                        filter: isDayTime 
+                          ? 'drop-shadow(0 0 12px rgba(234, 179, 8, 0.4))' 
+                          : 'drop-shadow(0 0 12px rgba(96, 165, 250, 0.4))'
+                      }}
+                    />
+                    <div className={`absolute inset-0 rounded-full ${
+                      isDayTime ? 'bg-yellow-200' : 'bg-blue-900'
+                    } opacity-20 animate-pulse`}></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
