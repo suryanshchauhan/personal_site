@@ -107,7 +107,7 @@ const HeroSection = () => {
                     }}
                   />
                   <div className='ml-1 sm:ml-2'>
-                    <Typography className='text-gray-600 dark:text-gray-700 text-xs sm:text-sm'>
+                    <Typography className='text-gray-600 dark:text-gray-700 text-xs sm:text-sm md:text-xs lg:text-sm'>
                       🇺🇸 United States of America
                     </Typography>
                     <Typography variant='h3' className='text-gray-900 dark:text-gray-900 text-xl sm:text-2xl md:text-xl lg:text-3xl'>
