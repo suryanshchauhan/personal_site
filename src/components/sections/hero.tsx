@@ -45,7 +45,7 @@ const HeroSection = () => {
     <Container id='hero'>
       <div className='flex flex-col gap-12 md:flex-row md:gap-6'>
         {/* Content */}
-        <div className='flex max-w-3xl flex-grow flex-col justify-center gap-8 md:items-start md:justify-center 2xl:gap-12'>
+        <div className='flex flex-col justify-center gap-8 md:items-start md:justify-center 2xl:gap-12'>
           <div className='flex flex-col gap-2'>
             <div className='text-3xl sm:text-4xl md:text-4xl lg:text-6xl font-semibold md:font-bold md:tracking-[-0.02em] lg:leading-[72px] text-gray-900'>
               <Typography 
@@ -108,11 +108,62 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
+        
+        {/* Cards Container */}
+        <div className='flex flex-col md:flex-row gap-6'>
+          {/* Left Cards */}
+          <div className='flex flex-col gap-4'>
+            {/* Currently Status Card */}
+            <div className='rounded-xl bg-gray-100 p-4 md:p-6 dark:bg-gray-100'>
+              <Typography variant='h3' className='text-gray-900 dark:text-gray-900 mb-4'>
+                Currently
+              </Typography>
+              <div className='flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-4'>
+                <Typography className='text-gray-900 dark:text-gray-900 font-medium'>
+                  Software Engineer at
+                </Typography>
+                <div className='rounded-md bg-gray-200 px-3 py-1 dark:bg-gray-200 transition-all duration-300 hover:scale-110 hover:bg-gray-300 dark:hover:bg-gray-800 cursor-pointer flex-shrink-0'>
+                  <Typography className='text-gray-900 dark:text-gray-900 text-xs sm:text-sm font-medium hover:text-gray-900 dark:hover:text-black'>
+                    Eknoor Trans ↗
+                  </Typography>
+                </div>
+              </div>
+              <Typography className='text-gray-600 dark:text-gray-600 text-xs sm:text-sm leading-relaxed'>
+                Developing web tools that keep trucks rolling, glitches rare, and the team always smiling.
+              </Typography>
+            </div>
 
-        {/* Education Card */}
-        <div className='flex items-center justify-center md:justify-start'>
+            {/* Location Card */}
+            <div className='rounded-xl bg-gray-100 p-4 md:p-6 dark:bg-gray-100'>
+              <div className='flex items-center justify-between'>
+                <div className='flex items-center gap-2 sm:gap-3'>
+                  <Navigation 
+                    className='w-8 h-8 sm:w-10 sm:h-10 text-gray-700 transition-all duration-500 ease-out drop-shadow-lg hover:text-gray-600 hover:scale-110' 
+                    style={{ 
+                      transform: `rotate(${scrollY * 0.8}deg) scale(${1 + Math.sin(scrollY * 0.01) * 0.1})`,
+                      filter: `drop-shadow(0 0 8px rgba(55, 65, 81, 0.3))`
+                    }}
+                  />
+                  <div className='ml-1 sm:ml-2'>
+                    <Typography className='text-gray-600 dark:text-gray-700 text-xs sm:text-sm md:text-xs lg:text-sm'>
+                      🇺🇸 United States of America
+                    </Typography>
+                    <Typography variant='h3' className='text-gray-900 dark:text-gray-900 text-3xl'>
+                      indianapolis
+                    </Typography>
+                    
+                    <Typography className='text-gray-900 dark:text-gray-900 text-base font-semibold'>
+                      {currentTime}
+                    </Typography>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Education Card */}
           <div className='w-full max-w-[320px]'>
-            <div className='rounded-xl bg-gray-100 p-6 dark:bg-gray-100'>
+            <div className='rounded-xl bg-gray-100 p-6 dark:bg-gray-100 h-full'>
               <Typography variant='h3' className='text-gray-900 dark:text-gray-900 mb-4'>
                 Education
               </Typography>
