@@ -66,7 +66,7 @@ const HeroSection = () => {
               <Typography variant='h1' component='span' className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold md:font-bold md:tracking-[-0.02em] lg:leading-[72px] text-gray-900'>
                 Hi, I&apos;m Suryansh
               </Typography>
-              {' '}
+                className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold md:font-bold md:tracking-[-0.02em] lg:leading-[72px] text-gray-900 [&:lang(de)]:text-2xl [&:lang(de)]:sm:text-3xl [&:lang(de)]:md:text-4xl [&:lang(de)]:lg:text-5xl'
               <span className='inline-block animate-waving-hand'>👋</span>
             </div>
           </div>
