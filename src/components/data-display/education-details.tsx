@@ -35,8 +35,8 @@ const EducationDetails = ({
 
   return (
     <Card className="mx-auto w-full overflow-hidden transition-all duration-300 hover:shadow-lg">
-      <div className="flex flex-col md:flex-row gap-6 p-6 md:p-8">
-        <div className="flex-shrink-0 flex justify-center md:justify-start">
+      <div className="flex flex-col gap-6 p-6 md:p-8">
+        <div className="flex-shrink-0 flex justify-center">
           {schoolUrl ? (
             <Link
               href={schoolUrl}
@@ -48,7 +48,7 @@ const EducationDetails = ({
                 src={logo}
                 srcForDarkMode={darkModeLogo}
                 alt={logoAlt}
-                className="max-w-[80px] md:max-w-[100px]"
+                className="max-w-[100px] md:max-w-[120px]"
               />
             </Link>
           ) : (
@@ -56,12 +56,12 @@ const EducationDetails = ({
               src={logo}
               srcForDarkMode={darkModeLogo}
               alt={logoAlt}
-              className="max-w-[80px] md:max-w-[100px]"
+              className="max-w-[100px] md:max-w-[120px]"
             />
           )}
         </div>
         
-        <div className="flex flex-col gap-3 flex-grow">
+        <div className="flex flex-col gap-3 flex-grow text-center">
           <div className="flex flex-col gap-2">
             <Typography variant="body2" className="text-gray-600">
               <span>{location} 🇺🇸</span>
