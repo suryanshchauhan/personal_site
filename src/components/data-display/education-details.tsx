@@ -34,6 +34,7 @@ const EducationDetails = ({
   const schoolUrl = getSchoolUrl(logoAlt);
 
   return (
+    <Card>
     <div className='rounded-xl bg-gray-100 p-4 md:p-6 dark:bg-gray-100'>
       <div className="flex flex-col gap-4">
         <div className="flex justify-center">
