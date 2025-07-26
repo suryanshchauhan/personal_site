@@ -128,6 +128,7 @@ const Typography = React.forwardRef<
       germanSizing,
       className
     );
+    
       <Comp
         className={finalClassName}
         ref={ref}
