@@ -45,7 +45,7 @@ const HeroSection = () => {
     <Container id='hero'>
       <div className='flex flex-col gap-12 md:flex-row'>
         {/* Image */}
-        <div className='flex items-center justify-center md:order-last md:flex-grow md:justify-end'>
+        <div className='flex items-start justify-center md:order-last md:flex-grow md:justify-end'>
           {/* Education Card */}
           <div className='w-full max-w-[320px]'>
             <div className='rounded-xl bg-gray-100 p-6 dark:bg-gray-100'>
