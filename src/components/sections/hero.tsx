@@ -111,7 +111,7 @@ const HeroSection = () => {
                       🇺🇸 United States of America
                     </Typography>
                     <div className='flex items-center gap-4'>
-                      <Typography variant='h3' className='text-gray-900 dark:text-gray-900 text-xl sm:text-2xl md:text-2xl lg:text-3xl'>
+                      <Typography variant='h3' className='text-gray-900 dark:text-gray-900 text-xl sm:text-2xl md:text-3xl lg:text-3xl'>
                         indianapolis
                       </Typography>
                       <Typography className='text-gray-900 dark:text-gray-900 text-sm sm:text-base md:text-sm lg:text-base font-semibold'>
