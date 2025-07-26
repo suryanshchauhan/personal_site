@@ -84,7 +84,7 @@ const HeroSection = () => {
                 <Typography className='text-gray-900 dark:text-gray-900 font-medium'>
                   Software Engineer at
                 </Typography>
-                <div className='rounded-md bg-gray-200 px-3 py-1 dark:bg-gray-200 transition-all duration-300 hover:scale-110 hover:bg-gray-300 dark:hover:bg-gray-800 cursor-pointer self-start'>
+                <div className='rounded-md bg-gray-200 px-3 py-1 dark:bg-gray-200 transition-all duration-300 hover:scale-110 hover:bg-gray-300 dark:hover:bg-gray-800 cursor-pointer flex-shrink-0'>
                   <Typography className='text-gray-900 dark:text-gray-900 text-xs sm:text-sm font-medium hover:text-gray-900 dark:hover:text-black'>
                     Eknoor Trans ↗
                   </Typography>
