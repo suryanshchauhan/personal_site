@@ -44,65 +44,8 @@ const HeroSection = () => {
   return (
     <Container id='hero'>
       <div className='flex flex-col gap-12 md:flex-row md:gap-6'>
-        {/* Image */}
-        <div className='flex items-start justify-center md:order-last md:flex-grow md:justify-end'>
-          {/* Education Card */}
-          <div className='w-full max-w-[320px] flex justify-center md:justify-start'>
-            <div className='w-full'>
-            <div className='rounded-xl bg-gray-100 p-6 dark:bg-gray-100'>
-              <Typography variant='h3' className='text-gray-900 dark:text-gray-900 mb-4'>
-                Education
-              </Typography>
-              
-              {/* DePauw University */}
-              <div className='mb-6'>
-                <div className='flex items-center gap-3 mb-2'>
-                  <div className='w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center dark:bg-gray-200'>
-                    <span className='text-gray-900 font-bold text-sm'>DU</span>
-                  </div>
-                  <div>
-                    <Typography className='text-gray-900 dark:text-gray-900 font-semibold text-sm'>
-                      DePauw University
-                    </Typography>
-                    <Typography className='text-gray-600 dark:text-gray-600 text-xs'>
-                      2020 - 2024
-                    </Typography>
-                  </div>
-                </div>
-                <Typography className='text-gray-700 dark:text-gray-700 text-sm ml-11'>
-                  Bachelor of Arts in Computer Science
-                </Typography>
-                <Typography className='text-gray-600 dark:text-gray-600 text-xs ml-11'>
-                  Minor in Mathematics
-                </Typography>
-              </div>
-
-              {/* High School */}
-              <div>
-                <div className='flex items-center gap-3 mb-2'>
-                  <div className='w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center dark:bg-gray-200'>
-                    <span className='text-gray-900 font-bold text-sm'>HS</span>
-                  </div>
-                  <div>
-                    <Typography className='text-gray-900 dark:text-gray-900 font-semibold text-sm'>
-                      High School
-                    </Typography>
-                    <Typography className='text-gray-600 dark:text-gray-600 text-xs'>
-                      2018 - 2020
-                    </Typography>
-                  </div>
-                </div>
-                <Typography className='text-gray-700 dark:text-gray-700 text-sm ml-11'>
-                  Science Stream
-                </Typography>
-              </div>
-            </div>
-            </div>
-          </div>
-        </div>
-
         {/* Content */}
-        <div className='flex max-w-3xl flex-grow flex-col justify-center gap-8 md:order-first md:items-start md:justify-center 2xl:gap-12'>
+        <div className='flex max-w-3xl flex-grow flex-col justify-center gap-8 md:items-start md:justify-center 2xl:gap-12'>
           <div className='flex flex-col gap-2'>
             <div className='text-3xl sm:text-4xl md:text-4xl lg:text-6xl font-semibold md:font-bold md:tracking-[-0.02em] lg:leading-[72px] text-gray-900'>
               <Typography 
@@ -161,6 +104,60 @@ const HeroSection = () => {
                     </Typography>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Education Card */}
+        <div className='flex items-center justify-center md:justify-start'>
+          <div className='w-full max-w-[320px]'>
+            <div className='rounded-xl bg-gray-100 p-6 dark:bg-gray-100'>
+              <Typography variant='h3' className='text-gray-900 dark:text-gray-900 mb-4'>
+                Education
+              </Typography>
+              
+              {/* DePauw University */}
+              <div className='mb-6'>
+                <div className='flex items-center gap-3 mb-2'>
+                  <div className='w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center dark:bg-gray-200'>
+                    <span className='text-gray-900 font-bold text-sm'>DU</span>
+                  </div>
+                  <div>
+                    <Typography className='text-gray-900 dark:text-gray-900 font-semibold text-sm'>
+                      DePauw University
+                    </Typography>
+                    <Typography className='text-gray-600 dark:text-gray-600 text-xs'>
+                      2020 - 2024
+                    </Typography>
+                  </div>
+                </div>
+                <Typography className='text-gray-700 dark:text-gray-700 text-sm ml-11'>
+                  Bachelor of Arts in Computer Science
+                </Typography>
+                <Typography className='text-gray-600 dark:text-gray-600 text-xs ml-11'>
+                  Minor in Mathematics
+                </Typography>
+              </div>
+
+              {/* High School */}
+              <div>
+                <div className='flex items-center gap-3 mb-2'>
+                  <div className='w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center dark:bg-gray-200'>
+                    <span className='text-gray-900 font-bold text-sm'>HS</span>
+                  </div>
+                  <div>
+                    <Typography className='text-gray-900 dark:text-gray-900 font-semibold text-sm'>
+                      High School
+                    </Typography>
+                    <Typography className='text-gray-600 dark:text-gray-600 text-xs'>
+                      2018 - 2020
+                    </Typography>
+                  </div>
+                </div>
+                <Typography className='text-gray-700 dark:text-gray-700 text-sm ml-11'>
+                  Science Stream
+                </Typography>
               </div>
             </div>
           </div>
