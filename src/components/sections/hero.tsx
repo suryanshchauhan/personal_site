@@ -110,11 +110,26 @@ const HeroSection = () => {
                     <Typography className='text-gray-600 dark:text-gray-700 text-xs sm:text-sm md:text-xs lg:text-sm'>
                       🇺🇸 United States of America
                     </Typography>
-                    <div className='flex items-center gap-4'>
-                      <Typography variant='h3' className='text-gray-900 dark:text-gray-900 text-xl sm:text-2xl md:text-2xl lg:text-3xl'>
-                        indianapolis
-                      </Typography>
-                      <Typography className='text-gray-900 dark:text-gray-900 text-sm sm:text-base md:text-sm lg:text-base font-semibold'>
+                      {/* Mobile and Tablet: Time next to indianapolis */}
+                      <div className='flex items-center gap-4 lg:hidden'>
+                        <Typography variant='h3' className='text-gray-900 dark:text-gray-900 text-xl sm:text-2xl md:text-2xl'>
+                          indianapolis
+                        </Typography>
+                        <Typography className='text-gray-900 dark:text-gray-900 text-sm sm:text-base md:text-sm font-semibold'>
+                          {currentTime}
+                        </Typography>
+                      </div>
+                      
+                      {/* Desktop: Original layout with time separate */}
+                      <div className='hidden lg:block'>
+                        <Typography variant='h3' className='text-gray-900 dark:text-gray-900 text-3xl'>
+                          indianapolis
+                        </Typography>
+                      </div>
+                    
+                    {/* Desktop: Time positioned separately */}
+                    <div className='hidden lg:block'>
+                      <Typography className='text-gray-900 dark:text-gray-900 text-base font-semibold'>
                         {currentTime}
                       </Typography>
                     </div>
