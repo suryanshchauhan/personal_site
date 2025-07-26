@@ -16,11 +16,8 @@ const ThemeSwitcher = () => {
 
   useEffect(() => {
     const darkmdTheme = window.matchMedia('(prefers-color-scheme: dark)');
-    if (darkmdTheme.matches) {
-      setTheme('dark');
-    } else {
-      setTheme('light');
-    }
+    // Default to dark mode regardless of system preference
+    setTheme('dark');
     setMounted(true);
   }, [setTheme]);
 
