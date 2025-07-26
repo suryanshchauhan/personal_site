@@ -120,10 +120,17 @@ const Typography = React.forwardRef<
       
       return children;
     }, [children, isGerman, noTranslate]);
+
+    // Add lang attribute for German text to enable CSS targeting
+    const langProps = isGerman && typeof children === 'string' && translations[children] 
+      ? { lang: 'de' } 
+      : {};
+
     return (
       <Comp
         className={mergeClasses(typographyVariants({ variant }), className)}
         ref={ref}
+        {...langProps}
         {...props}
       >
         {translatedChildren}

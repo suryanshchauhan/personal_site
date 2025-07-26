@@ -63,7 +63,11 @@ const HeroSection = () => {
         <div className='flex max-w-3xl flex-grow flex-col justify-center gap-8 md:order-first md:items-start md:justify-center 2xl:gap-12'>
           <div className='flex flex-col gap-2'>
             <div className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold md:font-bold md:tracking-[-0.02em] lg:leading-[72px] text-gray-900'>
-              <Typography variant='h1' component='span' className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold md:font-bold md:tracking-[-0.02em] lg:leading-[72px] text-gray-900'>
+              <Typography 
+                variant='h1' 
+                component='span' 
+                className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold md:font-bold md:tracking-[-0.02em] lg:leading-[72px] text-gray-900 [&:lang(de)]:text-2xl [&:lang(de)]:sm:text-3xl [&:lang(de)]:md:text-4xl [&:lang(de)]:lg:text-5xl'
+              >
                 Hi, I&apos;m Suryansh
               </Typography>
               {' '}
