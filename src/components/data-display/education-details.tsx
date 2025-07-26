@@ -64,7 +64,7 @@ const EducationDetails = ({
         <div className="flex flex-col gap-3 flex-grow">
           <div className="flex flex-col gap-2">
             <Typography variant="body2" className="text-gray-600">
-              🇺🇸 {location}
+              {location} 🇺🇸
             </Typography>
             <Typography variant="h3" className="font-semibold text-gray-900">
               {school}
