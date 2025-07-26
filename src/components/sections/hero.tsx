@@ -110,7 +110,7 @@ const HeroSection = () => {
                     <Typography className='text-gray-600 dark:text-gray-700 text-xs sm:text-sm md:text-xs lg:text-sm'>
                       🇺🇸 United States of America
                     </Typography>
-                    <Typography variant='h3' className='text-gray-900 dark:text-gray-900'>
+                    <Typography variant='h3' className='text-gray-900 dark:text-gray-900 mb-4'>
                       indianapolis
                     </Typography>
                     
