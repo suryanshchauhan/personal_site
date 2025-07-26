@@ -368,7 +368,7 @@ export const TESTIMONIALS: TestimonialDetails[] = [];
 
 export const EDUCATION: EducationDetails[] = [
   {
-    logo: LogoDepauw,
+    logo: LogoDepauwJpg,
     logoAlt: 'DePauw University',
     darkModeLogo: LogoDepauwLight,
     school: 'DePauw University',
