@@ -120,11 +120,9 @@ const Typography = React.forwardRef<
       
       return children;
     }, [children, isGerman, noTranslate]);
-
     return (
       <Comp
         className={mergeClasses(typographyVariants({ variant }), className)}
-        lang={isGerman ? 'de' : 'en'}
         ref={ref}
         {...props}
       >
