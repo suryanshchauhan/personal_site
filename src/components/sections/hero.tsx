@@ -103,7 +103,7 @@ const HeroSection = () => {
 
             {/* Location Card */}
             <div className='rounded-xl bg-gray-100 p-4 md:p-6 dark:bg-gray-100'>
-              <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4'>
+              <div className='flex flex-col xl:flex-row xl:items-center xl:justify-between gap-4'>
                 <div className='flex items-start lg:items-center gap-2 sm:gap-3'>
                   <Navigation 
                     className='w-8 h-8 sm:w-10 sm:h-10 text-gray-700 transition-all duration-500 ease-out drop-shadow-lg hover:text-gray-600 hover:scale-110' 
@@ -121,7 +121,7 @@ const HeroSection = () => {
                     </Typography>
                   </div>
                 </div>
-                <div className='text-left lg:text-right'>
+                <div className='text-left xl:text-right'>
                   <Typography className='text-gray-900 dark:text-gray-900 text-sm sm:text-base font-semibold'>
                     {currentTime}
                   </Typography>
