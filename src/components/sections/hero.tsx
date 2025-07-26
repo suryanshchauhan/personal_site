@@ -1,10 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import { Navigation } from 'lucide-react';
 
-import SuryanshPhoto from '/public/images/suryansh-photo.jpg';
 import SocialIcons from '@/components/data-display/social-icons';
 import Typography from '@/components/general/typography';
 import Container from '@/components/layout/container';
@@ -48,14 +46,56 @@ const HeroSection = () => {
       <div className='flex flex-col gap-12 md:flex-row'>
         {/* Image */}
         <div className='flex items-center justify-center md:order-last md:flex-grow md:justify-end'>
-          <div className='relative h-[300px] w-[280px] md:h-[360px] md:w-[320px]'>
-            <Image
-              src={SuryanshPhoto}
-              alt='Headshot of Suryansh'
-              className='absolute z-10 h-[280px] w-[240px] border-8 border-gray max-md:left-5 md:left-0 md:top-0 md:h-[320px] md:w-[280px]'
-              style={{ objectFit: 'cover' }}
-            ></Image>
-            <div className='absolute h-[280px] w-[280px] border-8 border-transparent bg-gray-200 max-md:top-5 md:bottom-0 md:right-0 md:h-[320px] md:w-[280px]'></div>
+          {/* Education Card */}
+          <div className='w-full max-w-[320px]'>
+            <div className='rounded-xl bg-gray-100 p-6 dark:bg-gray-100'>
+              <Typography variant='h3' className='text-gray-900 dark:text-gray-900 mb-4'>
+                Education
+              </Typography>
+              
+              {/* DePauw University */}
+              <div className='mb-6'>
+                <div className='flex items-center gap-3 mb-2'>
+                  <div className='w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center dark:bg-gray-200'>
+                    <span className='text-gray-900 font-bold text-sm'>DU</span>
+                  </div>
+                  <div>
+                    <Typography className='text-gray-900 dark:text-gray-900 font-semibold text-sm'>
+                      DePauw University
+                    </Typography>
+                    <Typography className='text-gray-600 dark:text-gray-600 text-xs'>
+                      2020 - 2024
+                    </Typography>
+                  </div>
+                </div>
+                <Typography className='text-gray-700 dark:text-gray-700 text-sm ml-11'>
+                  Bachelor of Arts in Computer Science
+                </Typography>
+                <Typography className='text-gray-600 dark:text-gray-600 text-xs ml-11'>
+                  Minor in Mathematics
+                </Typography>
+              </div>
+
+              {/* High School */}
+              <div>
+                <div className='flex items-center gap-3 mb-2'>
+                  <div className='w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center dark:bg-gray-200'>
+                    <span className='text-gray-900 font-bold text-sm'>HS</span>
+                  </div>
+                  <div>
+                    <Typography className='text-gray-900 dark:text-gray-900 font-semibold text-sm'>
+                      High School
+                    </Typography>
+                    <Typography className='text-gray-600 dark:text-gray-600 text-xs'>
+                      2018 - 2020
+                    </Typography>
+                  </div>
+                </div>
+                <Typography className='text-gray-700 dark:text-gray-700 text-sm ml-11'>
+                  Science Stream
+                </Typography>
+              </div>
+            </div>
           </div>
         </div>
 
