@@ -64,21 +64,13 @@ const EducationDetails = ({
         <div className="flex flex-col gap-3 flex-grow">
           <div className="flex flex-col gap-2">
             <Typography variant="body2" className="text-gray-600">
-              <Typography component="span" noTranslate={false}>
-                {location}
-              </Typography> 🇺🇸
+              {location} 🇺🇸
             </Typography>
             <Typography variant="h3" className="font-semibold text-gray-900">
-              <Typography component="span" noTranslate={false}>
-                {school}
-              </Typography>
+              {school}
             </Typography>
             <Typography variant="subtitle" className="text-gray-700">
-              <Typography component="span" noTranslate={false}>
-                {degree}
-              </Typography> in <Typography component="span" noTranslate={false}>
-                {field}
-              </Typography>
+              {degree} in {field}
             </Typography>
           </div>
           

@@ -36,16 +36,6 @@ const translations: { [key: string]: string } = {
   "You may also find me on these platforms!": "Sie können mich auch auf diesen Plattformen finden!",
   "Copied!": "Kopiert!",
   
-  // Education Section
-  "Education": "Bildung",
-  "My educational foundation:": "Meine Bildungsgrundlage:",
-  "Bachelor of Arts": "Bachelor of Arts",
-  "Computer Science": "Informatik",
-  
-  // University names and locations
-  "DePauw University": "DePauw University",
-  "IN, United States": "IN, Vereinigte Staaten",
-  
   // Footer
   "suryansh.wiki": "suryansh.wiki",
   
