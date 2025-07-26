@@ -103,8 +103,8 @@ const HeroSection = () => {
 
             {/* Location Card */}
             <div className='rounded-xl bg-gray-100 p-4 md:p-6 dark:bg-gray-100'>
-              <div className='flex flex-col xl:flex-row xl:items-center xl:justify-between gap-4'>
-                <div className='flex items-start lg:items-center gap-2 sm:gap-3'>
+              <div className='flex items-center justify-between'>
+                <div className='flex items-center gap-2 sm:gap-3'>
                   <Navigation 
                     className='w-8 h-8 sm:w-10 sm:h-10 text-gray-700 transition-all duration-500 ease-out drop-shadow-lg hover:text-gray-600 hover:scale-110' 
                     style={{ 
@@ -112,16 +112,16 @@ const HeroSection = () => {
                       filter: `drop-shadow(0 0 8px rgba(55, 65, 81, 0.3))`
                     }}
                   />
-                  <div className='ml-1 sm:ml-2 md:ml-2 flex flex-col'>
-                    <Typography className='text-gray-600 dark:text-gray-700 text-xs sm:text-sm md:mb-0 mb-1'>
+                  <div className='ml-1 sm:ml-2'>
+                    <Typography className='text-gray-600 dark:text-gray-700 text-xs sm:text-sm'>
                       🇺🇸 United States of America
                     </Typography>
-                    <Typography variant='h3' className='text-gray-900 dark:text-gray-900 text-xl sm:text-2xl md:text-3xl md:mb-0 mb-1'>
+                    <Typography variant='h3' className='text-gray-900 dark:text-gray-900 text-xl sm:text-2xl md:text-3xl'>
                       indianapolis
                     </Typography>
                   </div>
                 </div>
-                <div className='text-left xl:text-right'>
+                <div className='text-right'>
                   <Typography className='text-gray-900 dark:text-gray-900 text-sm sm:text-base font-semibold'>
                     {currentTime}
                   </Typography>
