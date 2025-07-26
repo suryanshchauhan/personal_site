@@ -36,6 +36,12 @@ const translations: { [key: string]: string } = {
   "You may also find me on these platforms!": "Sie können mich auch auf diesen Plattformen finden!",
   "Copied!": "Kopiert!",
   
+  // Education Section
+  "Education": "Bildung",
+  "My educational foundation:": "Meine Bildungsgrundlage:",
+  "Bachelor of Arts": "Bachelor of Arts",
+  "Computer Science": "Informatik",
+  
   // Footer
   "suryansh.wiki": "suryansh.wiki",
   
