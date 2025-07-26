@@ -47,7 +47,8 @@ const HeroSection = () => {
         {/* Image */}
         <div className='flex items-start justify-center md:order-last md:flex-grow md:justify-end'>
           {/* Education Card */}
-          <div className='w-full max-w-[320px]'>
+          <div className='w-full max-w-[320px] flex justify-center'>
+            <div className='w-full'>
             <div className='rounded-xl bg-gray-100 p-6 dark:bg-gray-100'>
               <Typography variant='h3' className='text-gray-900 dark:text-gray-900 mb-4'>
                 Education
@@ -95,6 +96,7 @@ const HeroSection = () => {
                   Science Stream
                 </Typography>
               </div>
+            </div>
             </div>
           </div>
         </div>
