@@ -42,6 +42,10 @@ const translations: { [key: string]: string } = {
   "Bachelor of Arts": "Bachelor of Arts",
   "Computer Science": "Informatik",
   
+  // University names and locations
+  "DePauw University": "DePauw University",
+  "IN, United States": "IN, Vereinigte Staaten",
+  
   // Footer
   "suryansh.wiki": "suryansh.wiki",
   
