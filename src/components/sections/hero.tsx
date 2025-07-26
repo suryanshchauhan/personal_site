@@ -9,13 +9,11 @@ import SocialIcons from '@/components/data-display/social-icons';
 import Typography from '@/components/general/typography';
 import Container from '@/components/layout/container';
 import useScroll from '@/hooks/use-scroll';
-import { useTranslation } from '@/lib/providers';
 
 const HeroSection = () => {
   const [currentTime, setCurrentTime] = useState('');
   const scrolled = useScroll(0);
   const [scrollY, setScrollY] = useState(0);
-  const { isGerman } = useTranslation();
 
   useEffect(() => {
     const updateTime = () => {
@@ -64,12 +62,8 @@ const HeroSection = () => {
         {/* Content */}
         <div className='flex max-w-3xl flex-grow flex-col justify-center gap-8 md:order-first md:items-start md:justify-center 2xl:gap-12'>
           <div className='flex flex-col gap-2'>
-            <div className={`${isGerman ? 'text-2xl sm:text-3xl md:text-4xl lg:text-5xl' : 'text-3xl sm:text-4xl md:text-5xl lg:text-6xl'} font-semibold md:font-bold md:tracking-[-0.02em] lg:leading-[72px] text-gray-900`}>
-              <Typography 
-                component='span' 
-                className={`${isGerman ? 'text-2xl sm:text-3xl md:text-4xl lg:text-5xl' : 'text-3xl sm:text-4xl md:text-5xl lg:text-6xl'} font-semibold md:font-bold md:tracking-[-0.02em] lg:leading-[72px] text-gray-900`}
-                noTranslate={false}
-              >
+            <div className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold md:font-bold md:tracking-[-0.02em] lg:leading-[72px] text-gray-900'>
+              <Typography variant='h1' component='span' className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold md:font-bold md:tracking-[-0.02em] lg:leading-[72px] text-gray-900'>
                 Hi, I&apos;m Suryansh
               </Typography>
               {' '}
@@ -82,12 +76,12 @@ const HeroSection = () => {
               <Typography variant='h3' className='text-gray-900 dark:text-gray-900 mb-4'>
                 Currently
               </Typography>
-              <div className='flex flex-row items-center gap-2 sm:gap-3 mb-4'>
-                <Typography className='text-gray-900 dark:text-gray-900 text-xs font-medium hover:text-gray-900 dark:hover:text-black'>
+              <div className='flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-4'>
+                <Typography className='text-gray-900 dark:text-gray-900 font-medium'>
                   Software Engineer at
                 </Typography>
-                <div className='rounded-md bg-gray-200 px-3 py-1 dark:bg-gray-200 transition-all duration-300 hover:scale-110 hover:bg-gray-300 dark:hover:bg-gray-800 cursor-pointer'>
-                  <Typography className='text-gray-900 dark:text-gray-900 text-xs font-medium hover:text-gray-900 dark:hover:text-black whitespace-nowrap'>
+                <div className='rounded-md bg-gray-200 px-3 py-1 dark:bg-gray-200 transition-all duration-300 hover:scale-110 hover:bg-gray-300 dark:hover:bg-gray-800 cursor-pointer self-start'>
+                  <Typography className='text-gray-900 dark:text-gray-900 text-xs sm:text-sm font-medium hover:text-gray-900 dark:hover:text-black'>
                     Eknoor Trans ↗
                   </Typography>
                 </div>
@@ -99,7 +93,7 @@ const HeroSection = () => {
 
             {/* Location Card */}
             <div className='rounded-xl bg-gray-100 p-4 md:p-6 dark:bg-gray-100'>
-              <div className='flex flex-col md:flex-row md:items-center md:justify-between'>
+              <div className='flex items-center justify-between'>
                 <div className='flex items-center gap-2 sm:gap-3'>
                   <Navigation 
                     className='w-8 h-8 sm:w-10 sm:h-10 text-gray-700 transition-all duration-500 ease-out drop-shadow-lg hover:text-gray-600 hover:scale-110' 
@@ -117,7 +111,7 @@ const HeroSection = () => {
                     </Typography>
                   </div>
                 </div>
-                <div className='mt-2 md:mt-0 text-left md:text-right flex flex-col md:flex-row md:items-center'>
+                <div className='text-right'>
                   <Typography className='text-gray-900 dark:text-gray-900 text-sm sm:text-base font-semibold'>
                     {currentTime}
                   </Typography>
